@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <namespace name="DashboardServiceImplementation" platform="Win64">
-  <class name="TDashboardService">
+  <class name="TDashboardService" file="DashboardServiceImplementation.pas" line="33">
     <attributes>
       <attribute name="TObject" />
     </attributes>
@@ -113,7 +113,7 @@
       <implements name="IDashboardService" />
     </interfaces>
     <members>
-      <function name="AdministratorDashboard" visibility="private">
+      <function name="AdministratorDashboard" visibility="private" file="DashboardServiceImplementation.pas" line="35">
         <parameters>
           <retval type="TStream" />
         </parameters>

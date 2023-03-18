@@ -1,4 +1,4 @@
-unit Unit1;
+unit UServerContainer;
 
 interface
 
@@ -41,6 +41,7 @@ procedure TServerContainer.DataModuleCreate(Sender: TObject);
 begin
   // Setup Swagger Header
   TXDataModelBuilder.LoadXMLDoc(XDataServer.Model);
+
   XDataServer.Model.Title := 'XData Template Demo API';
   XDataServer.Model.Version := '1.0';
   XDataServer.Model.Description :=

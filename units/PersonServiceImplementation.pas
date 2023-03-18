@@ -38,7 +38,8 @@ type
 
 implementation
 
-uses Unit1, Unit2, Unit3, TZDB;
+uses
+  UMain, UServerContainer, UDBSupport, TZDB;
 
 function TPersonService.Directory(Format: String): TStream;
 var
@@ -63,6 +64,7 @@ begin
   try
     DatabaseName := User.Claims.Find('dbn').AsString;
     DatabaseEngine := User.Claims.Find('dbe').AsString;
+
     DBSupport.ConnectQuery(DBConn, Query1, DatabaseName, DatabaseEngine);
   except on E: Exception do
     begin
@@ -117,6 +119,7 @@ begin
     Query1.ParamByName('DATABASEENGINE').AsString := DatabaseEngine;
     Query1.ParamByName('EXECUTIONMS').AsInteger := MillisecondsBetween(Now,ElapsedTime);
     Query1.ParamByName('DETAILS').AsString := '['+User.Claims.Find('anm').AsString+'] ['+Format+']';
+
     Query1.ExecSQL;
   except on E: Exception do
     begin

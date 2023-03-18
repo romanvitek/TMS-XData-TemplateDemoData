@@ -433,9 +433,9 @@
   <contains name="TZDB" />
   <contains name="SystemServiceImplementation" />
   <contains name="SystemService" />
-  <contains name="Unit3" />
-  <contains name="Unit2" />
-  <contains name="Unit1" />
+  <contains name="UDBSupport" />
+  <contains name="UMain" />
+  <contains name="UServerContainer" />
   <contains name="Vcl.Forms" />
   <contains name="SysInit" />
   <contains name="System" />

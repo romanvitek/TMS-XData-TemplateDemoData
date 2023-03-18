@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <namespace name="CryptBase" platform="Win64">
-  <class name="TTMSCryptBase">
+  <class name="TTMSCryptBase" file="CryptBase.pas" line="32">
     <ancestor name="TComponent" namespace="System.Classes">
       <interfaces>
         <implements name="IInterfaceComponentReference" />
@@ -312,22 +312,22 @@
       </ancestor>
     </ancestor>
     <members>
-      <function name="GetVersion" visibility="published">
+      <function name="GetVersion" visibility="published" file="CryptBase.pas" line="33">
         <parameters>
           <retval type="string" />
         </parameters>
       </function>
-      <procedure name="SetVersion" visibility="published">
+      <procedure name="SetVersion" visibility="published" file="CryptBase.pas" line="34">
         <parameters>
           <parameter name="Value" type="string" paramflags="const" />
         </parameters>
       </procedure>
-      <function name="GetVersionNr" visibility="protected" procflags="virtual">
+      <function name="GetVersionNr" visibility="protected" procflags="virtual" file="CryptBase.pas" line="36">
         <parameters>
           <retval type="Integer" />
         </parameters>
       </function>
-      <property name="Version" visibility="published" read="GetVersion" write="SetVersion" type="string" default="0" />
+      <property name="Version" visibility="published" read="GetVersion" write="SetVersion" type="string" default="0" file="CryptBase.pas" line="38" />
     </members>
   </class>
 </namespace>

@@ -1,60 +1,60 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <namespace name="MiscObj" platform="Win64">
-  <const name="TMSPlatforms" type="Integer">
+  <const name="TMSPlatforms" type="Integer" file="MiscObj.pas" line="32">
     <value>
       $1945F
     </value>
   </const>
-  <const name="base64" type="TConvertType">
+  <const name="base64" type="TConvertType" file="MiscObj.pas" line="50">
     <value>
       base64
     </value>
   </const>
-  <const name="hexa" type="TConvertType">
+  <const name="hexa" type="TConvertType" file="MiscObj.pas" line="50">
     <value>
       hexa
     </value>
   </const>
-  <const name="base64url" type="TConvertType">
+  <const name="base64url" type="TConvertType" file="MiscObj.pas" line="50">
     <value>
       base64url
     </value>
   </const>
-  <const name="base32" type="TConvertType">
+  <const name="base32" type="TConvertType" file="MiscObj.pas" line="50">
     <value>
       base32
     </value>
   </const>
-  <const name="raw" type="TConvertType">
+  <const name="raw" type="TConvertType" file="MiscObj.pas" line="50">
     <value>
       raw
     </value>
   </const>
-  <const name="noUni" type="TUnicode">
+  <const name="noUni" type="TUnicode" file="MiscObj.pas" line="51">
     <value>
       noUni
     </value>
   </const>
-  <const name="yesUni" type="TUnicode">
+  <const name="yesUni" type="TUnicode" file="MiscObj.pas" line="51">
     <value>
       yesUni
     </value>
   </const>
-  <enum name="TConvertType">
+  <enum name="TConvertType" file="MiscObj.pas" line="50">
     <attributes>
       <attribute name="ComponentPlatformsAttribute" />
     </attributes>
-    <element value="0" name="base64" />
-    <element value="1" name="hexa" />
-    <element value="2" name="base64url" />
-    <element value="3" name="base32" />
-    <element value="4" name="raw" />
+    <element value="0" name="base64" file="MiscObj.pas" line="50" />
+    <element value="1" name="hexa" file="MiscObj.pas" line="50" />
+    <element value="2" name="base64url" file="MiscObj.pas" line="50" />
+    <element value="3" name="base32" file="MiscObj.pas" line="50" />
+    <element value="4" name="raw" file="MiscObj.pas" line="50" />
   </enum>
-  <enum name="TUnicode">
-    <element value="0" name="noUni" />
-    <element value="1" name="yesUni" />
+  <enum name="TUnicode" file="MiscObj.pas" line="51">
+    <element value="0" name="noUni" file="MiscObj.pas" line="51" />
+    <element value="1" name="yesUni" file="MiscObj.pas" line="51" />
   </enum>
-  <class name="TConvert">
+  <class name="TConvert" file="MiscObj.pas" line="53">
     <ancestor name="TTMSCryptBase" namespace="CryptBase">
       <methodref name="GetVersion" visibility="published" />
       <methodref name="SetVersion" visibility="published" />
@@ -372,53 +372,53 @@
       </ancestor>
     </ancestor>
     <members>
-      <field name="FType" type="TConvertType" visibility="private" size="1" offset="120" />
-      <function name="NormalizeFormat" visibility="private">
+      <field name="FType" type="TConvertType" visibility="private" size="1" offset="120" file="MiscObj.pas" line="55" />
+      <function name="NormalizeFormat" visibility="private" file="MiscObj.pas" line="56">
         <parameters>
           <parameter name="str" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <constructor name="Create" visibility="public">
+      <constructor name="Create" visibility="public" file="MiscObj.pas" line="58">
         <parameters>
           <parameter name="AOwner" type="TComponent" />
         </parameters>
       </constructor>
-      <constructor name="Create" visibility="public">
+      <constructor name="Create" visibility="public" file="MiscObj.pas" line="59">
         <parameters>
         </parameters>
       </constructor>
-      <constructor name="Create" visibility="public">
+      <constructor name="Create" visibility="public" file="MiscObj.pas" line="60">
         <parameters>
           <parameter name="AType" type="TConvertType" />
         </parameters>
       </constructor>
-      <function name="CharToFormat" visibility="public">
+      <function name="CharToFormat" visibility="public" file="MiscObj.pas" line="62">
         <parameters>
           <parameter name="charstring" type="PAnsiChar" />
           <parameter name="charlen" type="Integer" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="FormatToChar" visibility="public">
+      <function name="FormatToChar" visibility="public" file="MiscObj.pas" line="63">
         <parameters>
           <parameter name="str" type="string" />
           <retval type="PAnsiChar" />
         </parameters>
       </function>
-      <function name="UnicodeToPAnsiChar" visibility="public">
+      <function name="UnicodeToPAnsiChar" visibility="public" file="MiscObj.pas" line="64">
         <parameters>
           <parameter name="str" type="string" />
           <retval type="PAnsiChar" />
         </parameters>
       </function>
-      <function name="PAnsiCharFromUnicodeLength" visibility="public">
+      <function name="PAnsiCharFromUnicodeLength" visibility="public" file="MiscObj.pas" line="65">
         <parameters>
           <parameter name="str" type="string" />
           <retval type="Integer" />
         </parameters>
       </function>
-      <function name="StringToBuffer" visibility="public">
+      <function name="StringToBuffer" visibility="public" file="MiscObj.pas" line="66">
         <parameters>
           <parameter name="str" type="string" />
           <parameter name="u" type="TUnicode" />
@@ -426,191 +426,191 @@
           <retval type="PAnsiChar" />
         </parameters>
       </function>
-      <function name="StringToBufferA" visibility="public">
+      <function name="StringToBufferA" visibility="public" file="MiscObj.pas" line="68">
         <parameters>
           <parameter name="str" type="string" />
           <parameter name="u" type="TUnicode" />
           <retval type="PAnsiChar" />
         </parameters>
       </function>
-      <function name="StringToPAnsiChar" visibility="public">
+      <function name="StringToPAnsiChar" visibility="public" file="MiscObj.pas" line="69">
         <parameters>
           <parameter name="str" type="string" />
           <retval type="PAnsiChar" />
         </parameters>
       </function>
-      <function name="UnicodeStringToFormat" visibility="public">
+      <function name="UnicodeStringToFormat" visibility="public" file="MiscObj.pas" line="78">
         <parameters>
           <parameter name="str" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="FormatToUnicodeString" visibility="public">
+      <function name="FormatToUnicodeString" visibility="public" file="MiscObj.pas" line="79">
         <parameters>
           <parameter name="str" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="StringToByteArray" visibility="public">
+      <function name="StringToByteArray" visibility="public" file="MiscObj.pas" line="80">
         <parameters>
           <parameter name="str" type="string" />
           <retval type="TArray&lt;System.Byte&gt;" />
         </parameters>
       </function>
-      <function name="TestUnicode" visibility="public">
+      <function name="TestUnicode" visibility="public" file="MiscObj.pas" line="81">
         <parameters>
           <parameter name="str" type="string" />
           <retval type="Integer" />
         </parameters>
       </function>
-      <function name="StringToUnicode" visibility="public">
+      <function name="StringToUnicode" visibility="public" file="MiscObj.pas" line="82">
         <parameters>
           <parameter name="str" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="StringToFormat" visibility="public">
+      <function name="StringToFormat" visibility="public" file="MiscObj.pas" line="83">
         <parameters>
           <parameter name="charstring" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="FormatToString" visibility="public">
+      <function name="FormatToString" visibility="public" file="MiscObj.pas" line="84">
         <parameters>
           <parameter name="str" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="OutputFormatLength" visibility="public">
+      <function name="OutputFormatLength" visibility="public" file="MiscObj.pas" line="85">
         <parameters>
           <parameter name="charlen" type="Integer" />
           <retval type="Integer" />
         </parameters>
       </function>
-      <function name="CharLength" visibility="public">
+      <function name="CharLength" visibility="public" file="MiscObj.pas" line="86">
         <parameters>
           <parameter name="charstring" type="string" />
           <retval type="Integer" />
         </parameters>
       </function>
-      <function name="Base64ToHexa" visibility="public">
+      <function name="Base64ToHexa" visibility="public" file="MiscObj.pas" line="87">
         <parameters>
           <parameter name="base64String" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="HexaToBase64" visibility="public">
+      <function name="HexaToBase64" visibility="public" file="MiscObj.pas" line="88">
         <parameters>
           <parameter name="hexaString" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="Base64ToBase64url" visibility="public">
+      <function name="Base64ToBase64url" visibility="public" file="MiscObj.pas" line="89">
         <parameters>
           <parameter name="inString" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="Base64urlToBase64" visibility="public">
+      <function name="Base64urlToBase64" visibility="public" file="MiscObj.pas" line="90">
         <parameters>
           <parameter name="inString" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="Base64urlToHexa" visibility="public">
+      <function name="Base64urlToHexa" visibility="public" file="MiscObj.pas" line="91">
         <parameters>
           <parameter name="inString" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="HexaToBase64url" visibility="public">
+      <function name="HexaToBase64url" visibility="public" file="MiscObj.pas" line="92">
         <parameters>
           <parameter name="inString" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="Base32ToHexa" visibility="public">
+      <function name="Base32ToHexa" visibility="public" file="MiscObj.pas" line="93">
         <parameters>
           <parameter name="base32String" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="HexaToBase32" visibility="public">
+      <function name="HexaToBase32" visibility="public" file="MiscObj.pas" line="94">
         <parameters>
           <parameter name="hexaString" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="Base32ToBase64url" visibility="public">
+      <function name="Base32ToBase64url" visibility="public" file="MiscObj.pas" line="95">
         <parameters>
           <parameter name="inString" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="Base64urlToBase32" visibility="public">
+      <function name="Base64urlToBase32" visibility="public" file="MiscObj.pas" line="96">
         <parameters>
           <parameter name="inString" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="Base32ToBase64" visibility="public">
+      <function name="Base32ToBase64" visibility="public" file="MiscObj.pas" line="97">
         <parameters>
           <parameter name="inString" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="Base64ToBase32" visibility="public">
+      <function name="Base64ToBase32" visibility="public" file="MiscObj.pas" line="98">
         <parameters>
           <parameter name="inString" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="KeyRSAOpenSSLToKeyTRSAEncSign" visibility="public">
+      <function name="KeyRSAOpenSSLToKeyTRSAEncSign" visibility="public" file="MiscObj.pas" line="99">
         <parameters>
           <parameter name="strKey" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="KeyTRSAEncSignToKeyRSAOpenSSL" visibility="public">
+      <function name="KeyTRSAEncSignToKeyRSAOpenSSL" visibility="public" file="MiscObj.pas" line="100">
         <parameters>
           <parameter name="strKey" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="Base58Encode" visibility="public">
+      <function name="Base58Encode" visibility="public" file="MiscObj.pas" line="101">
         <parameters>
           <parameter name="value" type="UInt64" paramflags="const" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="Base58Decode" visibility="public">
+      <function name="Base58Decode" visibility="public" file="MiscObj.pas" line="102">
         <parameters>
           <parameter name="encoded" type="string" paramflags="const" />
           <retval type="UInt64" />
         </parameters>
       </function>
-      <function name="TBytesToString" visibility="public">
+      <function name="TBytesToString" visibility="public" file="MiscObj.pas" line="103">
         <parameters>
           <parameter name="t" type="TBytes" paramflags="const" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="StringToTBytes" visibility="public">
+      <function name="StringToTBytes" visibility="public" file="MiscObj.pas" line="104">
         <parameters>
           <parameter name="str" type="string" paramflags="const" />
           <retval type="TBytes" />
         </parameters>
       </function>
-      <function name="RandomString" visibility="public">
+      <function name="RandomString" visibility="public" file="MiscObj.pas" line="105">
         <parameters>
           <parameter name="len" type="Integer" />
           <retval type="string" />
         </parameters>
       </function>
-      <property name="AType" visibility="published" read="FType" write="FType" type="TConvertType" default="1" />
+      <property name="AType" visibility="published" read="FType" write="FType" type="TConvertType" default="1" file="MiscObj.pas" line="107" />
     </members>
   </class>
-  <class name="ECryptoPack">
+  <class name="ECryptoPack" file="MiscObj.pas" line="111">
     <ancestor name="Exception" namespace="System.SysUtils">
       <methodref name="Create@" visibility="class private" procflags="class constructor noself">
       </methodref>
@@ -754,45 +754,45 @@
       </ancestor>
     </ancestor>
     <members>
-      <field name="FCode" type="Integer" visibility="private" size="4" offset="48" />
-      <constructor name="Create" visibility="public">
+      <field name="FCode" type="Integer" visibility="private" size="4" offset="48" file="MiscObj.pas" line="113" />
+      <constructor name="Create" visibility="public" file="MiscObj.pas" line="115">
         <parameters>
           <parameter name="Code" type="Integer" />
         </parameters>
       </constructor>
-      <constructor name="Create" visibility="public">
+      <constructor name="Create" visibility="public" file="MiscObj.pas" line="116">
         <parameters>
           <parameter name="errorMessag" type="string" />
         </parameters>
       </constructor>
-      <property name="Code" visibility="public" read="FCode" type="Integer" />
+      <property name="Code" visibility="public" read="FCode" type="Integer" file="MiscObj.pas" line="117" />
     </members>
   </class>
-  <function name="RandomBuffer" visibility="external public" callconv="cdecl">
+  <function name="RandomBuffer" visibility="external public" callconv="cdecl" file="MiscObj.pas" line="293">
     <parameters>
       <parameter name="len" type="Integer" />
       <parameter name="MyBuffer" type="PAnsiChar" />
       <retval type="Integer" />
     </parameters>
   </function>
-  <function name="RandomUBuffer" visibility="external public" callconv="cdecl">
+  <function name="RandomUBuffer" visibility="external public" callconv="cdecl" file="MiscObj.pas" line="295">
     <parameters>
       <parameter name="len" type="Integer" />
       <parameter name="MyBuffer" type="PAnsiChar" />
       <retval type="Integer" />
     </parameters>
   </function>
-  <function name="RandomInt" visibility="external public" callconv="cdecl">
+  <function name="RandomInt" visibility="external public" callconv="cdecl" file="MiscObj.pas" line="297">
     <parameters>
       <retval type="Integer" />
     </parameters>
   </function>
-  <function name="RandomUInt" visibility="external public" callconv="cdecl">
+  <function name="RandomUInt" visibility="external public" callconv="cdecl" file="MiscObj.pas" line="298">
     <parameters>
       <retval type="Integer" />
     </parameters>
   </function>
-  <function name="PosExZ" visibility="public">
+  <function name="PosExZ" visibility="public" file="MiscObj.pas" line="1582">
     <parameters>
       <parameter name="SubString" type="string" paramflags="const" />
       <parameter name="s" type="string" paramflags="const" />
@@ -800,7 +800,7 @@
       <retval type="Integer" />
     </parameters>
   </function>
-  <function name="CharToHexa" visibility="public" callconv="cdecl">
+  <function name="CharToHexa" visibility="public" callconv="cdecl" file="MiscObj.pas" line="231">
     <parameters>
       <parameter name="charstring" type="PAnsiChar" />
       <parameter name="lenCharString" type="Integer" />
@@ -808,21 +808,21 @@
       <retval type="Integer" />
     </parameters>
   </function>
-  <function name="HexaToChar" visibility="public" callconv="cdecl">
+  <function name="HexaToChar" visibility="public" callconv="cdecl" file="MiscObj.pas" line="232">
     <parameters>
       <parameter name="hexaString" type="PAnsiChar" />
       <parameter name="charstring" type="PAnsiChar" />
       <retval type="Integer" />
     </parameters>
   </function>
-  <function name="Base64ToChar" visibility="public" callconv="cdecl">
+  <function name="Base64ToChar" visibility="public" callconv="cdecl" file="MiscObj.pas" line="234">
     <parameters>
       <parameter name="base64String" type="PAnsiChar" />
       <parameter name="charstring" type="PAnsiChar" />
       <retval type="Integer" />
     </parameters>
   </function>
-  <function name="CharToBase64" visibility="public" callconv="cdecl">
+  <function name="CharToBase64" visibility="public" callconv="cdecl" file="MiscObj.pas" line="237">
     <parameters>
       <parameter name="charstring" type="PAnsiChar" />
       <parameter name="lenCharString" type="Integer" />
@@ -830,14 +830,14 @@
       <retval type="Integer" />
     </parameters>
   </function>
-  <function name="Base32ToChar" visibility="public" callconv="cdecl">
+  <function name="Base32ToChar" visibility="public" callconv="cdecl" file="MiscObj.pas" line="244">
     <parameters>
       <parameter name="base32String" type="PAnsiChar" />
       <parameter name="charstring" type="PAnsiChar" />
       <retval type="Integer" />
     </parameters>
   </function>
-  <function name="CharToBase32" visibility="public" callconv="cdecl">
+  <function name="CharToBase32" visibility="public" callconv="cdecl" file="MiscObj.pas" line="247">
     <parameters>
       <parameter name="charstring" type="PAnsiChar" />
       <parameter name="lenCharString" type="Integer" />
@@ -845,14 +845,14 @@
       <retval type="Integer" />
     </parameters>
   </function>
-  <function name="Base64urlToChar" visibility="public" callconv="cdecl">
+  <function name="Base64urlToChar" visibility="public" callconv="cdecl" file="MiscObj.pas" line="239">
     <parameters>
       <parameter name="base64String" type="PAnsiChar" />
       <parameter name="charstring" type="PAnsiChar" />
       <retval type="Integer" />
     </parameters>
   </function>
-  <function name="CharToBase64url" visibility="public" callconv="cdecl">
+  <function name="CharToBase64url" visibility="public" callconv="cdecl" file="MiscObj.pas" line="242">
     <parameters>
       <parameter name="charstring" type="PAnsiChar" />
       <parameter name="lenCharString" type="Integer" />
@@ -860,7 +860,7 @@
       <retval type="Integer" />
     </parameters>
   </function>
-  <procedure name="ErrorMessage" visibility="public" callconv="cdecl">
+  <procedure name="ErrorMessage" visibility="public" callconv="cdecl" file="MiscObj.pas" line="248">
     <parameters>
       <parameter name="error" type="Integer" />
       <parameter name="message" type="PAnsiChar" />

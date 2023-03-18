@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <namespace name="PersonServiceImplementation" platform="Win64">
-  <class name="TPersonService">
+  <class name="TPersonService" file="PersonServiceImplementation.pas" line="33">
     <attributes>
       <attribute name="TObject" />
     </attributes>
@@ -113,13 +113,13 @@
       <implements name="IPersonService" />
     </interfaces>
     <members>
-      <function name="Directory" visibility="private">
+      <function name="Directory" visibility="private" file="PersonServiceImplementation.pas" line="35">
         <parameters>
           <parameter name="Format" type="string" />
           <retval type="TStream" />
         </parameters>
       </function>
-      <function name="Profile" visibility="private">
+      <function name="Profile" visibility="private" file="PersonServiceImplementation.pas" line="36">
         <parameters>
           <retval type="TStream" />
         </parameters>

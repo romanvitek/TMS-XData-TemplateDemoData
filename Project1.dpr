@@ -2,9 +2,9 @@ program Project1;
 
 uses
   Vcl.Forms,
-  Unit1 in 'units\Unit1.pas' {ServerContainer: TDataModule},
-  Unit2 in 'units\Unit2.pas' {MainForm},
-  Unit3 in 'units\Unit3.pas' {DBSupport: TDataModule},
+  UServerContainer in 'units\UServerContainer.pas' {ServerContainer: TDataModule},
+  UMain in 'units\UMain.pas' {MainForm},
+  UDBSupport in 'units\UDBSupport.pas' {DBSupport: TDataModule},
   SystemService in 'units\SystemService.pas',
   SystemServiceImplementation in 'units\SystemServiceImplementation.pas',
   TZDB in 'TZDB.pas',

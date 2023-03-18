@@ -1,4 +1,4 @@
-unit Unit3;
+unit UDBSupport;
 
 interface
 
@@ -54,7 +54,8 @@ implementation
 
 {$R *.dfm}
 
-uses Unit1, Unit2;
+uses
+  UMain, UServerContainer;
 
 function TDBSupport.HashThis(InputText: String):String;
 var

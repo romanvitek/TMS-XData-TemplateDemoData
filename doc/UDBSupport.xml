@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<namespace name="Unit3" platform="Win64">
-  <class name="TDBSupport" file="Unit3.pas" line="35">
+<namespace name="UDBSupport" platform="Win64">
+  <class name="TDBSupport" file="UDBSupport.pas" line="35">
     <ancestor name="TDataModule" namespace="System.Classes">
       <methodref name="ReadHeight" visibility="private">
       </methodref>
@@ -362,7 +362,7 @@
       </ancestor>
     </ancestor>
     <members>
-      <procedure name="ConnectQuery" visibility="public" file="Unit3.pas" line="40">
+      <procedure name="ConnectQuery" visibility="public" file="UDBSupport.pas" line="40">
         <parameters>
           <parameter name="conn" type="TFDConnection" paramflags="var" />
           <parameter name="qry" type="TFDQuery" paramflags="var" />
@@ -370,32 +370,32 @@
           <parameter name="DatabaseEngine" type="string" />
         </parameters>
       </procedure>
-      <procedure name="DisconnectQuery" visibility="public" file="Unit3.pas" line="41">
+      <procedure name="DisconnectQuery" visibility="public" file="UDBSupport.pas" line="41">
         <parameters>
           <parameter name="conn" type="TFDConnection" paramflags="var" />
           <parameter name="qry" type="TFDQuery" paramflags="var" />
         </parameters>
       </procedure>
-      <function name="HashThis" visibility="public" file="Unit3.pas" line="42">
+      <function name="HashThis" visibility="public" file="UDBSupport.pas" line="42">
         <parameters>
           <parameter name="InputText" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <procedure name="Export" visibility="public" file="Unit3.pas" line="43">
+      <procedure name="Export" visibility="public" file="UDBSupport.pas" line="43">
         <parameters>
           <parameter name="Format" type="string" />
           <parameter name="QueryResult" type="TFDQuery" />
           <parameter name="OutputStream" type="TStream" paramflags="var" />
         </parameters>
       </procedure>
-      <function name="QueryToJSON" visibility="public" file="Unit3.pas" line="44">
+      <function name="QueryToJSON" visibility="public" file="UDBSupport.pas" line="44">
         <parameters>
           <parameter name="QueryResult" type="TFDQuery" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="DecodeSession" visibility="public" file="Unit3.pas" line="45">
+      <function name="DecodeSession" visibility="public" file="UDBSupport.pas" line="45">
         <parameters>
           <parameter name="s" type="string" />
           <retval type="TDateTime" />
@@ -403,5 +403,5 @@
       </function>
     </members>
   </class>
-  <variable name="DBSupport" type="TDBSupport" file="Unit3.pas" line="49" />
+  <variable name="DBSupport" type="TDBSupport" file="UDBSupport.pas" line="49" />
 </namespace>

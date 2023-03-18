@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <namespace name="Unit1" platform="Win64">
-  <class name="TServerContainer">
+  <class name="TServerContainer" file="Unit1.pas" line="20">
     <ancestor name="TDataModule" namespace="System.Classes">
       <methodref name="ReadHeight" visibility="private">
       </methodref>
@@ -362,19 +362,19 @@
       </ancestor>
     </ancestor>
     <members>
-      <field name="SparkleHttpSysDispatcher" type="TSparkleHttpSysDispatcher" visibility="published" size="8" offset="176" />
-      <field name="XDataServer" type="TXDataServer" visibility="published" size="8" offset="184" />
-      <field name="XDataConnectionPool" type="TXDataConnectionPool" visibility="published" size="8" offset="192" />
-      <field name="AureliusConnection" type="TAureliusConnection" visibility="published" size="8" offset="200" />
-      <field name="XDataServerJWT" type="TSparkleJwtMiddleware" visibility="published" size="8" offset="208" />
-      <field name="XDataServerCompress" type="TSparkleCompressMiddleware" visibility="published" size="8" offset="216" />
-      <field name="XDataServerCORS" type="TSparkleCorsMiddleware" visibility="published" size="8" offset="224" />
-      <procedure name="DataModuleCreate" visibility="published">
+      <field name="SparkleHttpSysDispatcher" type="TSparkleHttpSysDispatcher" visibility="published" size="8" offset="176" file="Unit1.pas" line="21" />
+      <field name="XDataServer" type="TXDataServer" visibility="published" size="8" offset="184" file="Unit1.pas" line="22" />
+      <field name="XDataConnectionPool" type="TXDataConnectionPool" visibility="published" size="8" offset="192" file="Unit1.pas" line="23" />
+      <field name="AureliusConnection" type="TAureliusConnection" visibility="published" size="8" offset="200" file="Unit1.pas" line="24" />
+      <field name="XDataServerJWT" type="TSparkleJwtMiddleware" visibility="published" size="8" offset="208" file="Unit1.pas" line="25" />
+      <field name="XDataServerCompress" type="TSparkleCompressMiddleware" visibility="published" size="8" offset="216" file="Unit1.pas" line="26" />
+      <field name="XDataServerCORS" type="TSparkleCorsMiddleware" visibility="published" size="8" offset="224" file="Unit1.pas" line="27" />
+      <procedure name="DataModuleCreate" visibility="published" file="Unit1.pas" line="28">
         <parameters>
           <parameter name="Sender" type="TObject" />
         </parameters>
       </procedure>
     </members>
   </class>
-  <variable name="ServerContainer" type="TServerContainer" />
+  <variable name="ServerContainer" type="TServerContainer" file="Unit1.pas" line="32" />
 </namespace>

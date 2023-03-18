@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <namespace name="SystemServiceImplementation" platform="Win64">
-  <class name="TSystemService">
+  <class name="TSystemService" file="SystemServiceImplementation.pas" line="33">
     <attributes>
       <attribute name="TObject" />
     </attributes>
@@ -113,13 +113,13 @@
       <implements name="ISystemService" />
     </interfaces>
     <members>
-      <function name="Info" visibility="private">
+      <function name="Info" visibility="private" file="SystemServiceImplementation.pas" line="36">
         <parameters>
           <parameter name="TZ" type="string" />
           <retval type="TStream" />
         </parameters>
       </function>
-      <function name="Login" visibility="private">
+      <function name="Login" visibility="private" file="SystemServiceImplementation.pas" line="37">
         <parameters>
           <parameter name="Login_ID" type="string" />
           <parameter name="Password" type="string" />
@@ -128,14 +128,14 @@
           <retval type="TStream" />
         </parameters>
       </function>
-      <function name="Logout" visibility="private">
+      <function name="Logout" visibility="private" file="SystemServiceImplementation.pas" line="38">
         <parameters>
           <parameter name="ActionSession" type="string" />
           <parameter name="ActionLog" type="string" />
           <retval type="TStream" />
         </parameters>
       </function>
-      <function name="Renew" visibility="private">
+      <function name="Renew" visibility="private" file="SystemServiceImplementation.pas" line="39">
         <parameters>
           <parameter name="ActionSession" type="string" />
           <parameter name="ActionLog" type="string" />

@@ -1,26 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <namespace name="HashObj" platform="Win64">
-  <const name="TMSPlatforms" type="Integer">
+  <const name="TMSPlatforms" type="Integer" file="HashObj.pas" line="34">
     <value>
       $1945F
     </value>
   </const>
-  <const name="hsha2" type="THashFunction">
+  <const name="hsha2" type="THashFunction" file="HashObj.pas" line="61">
     <value>
       hsha2
     </value>
   </const>
-  <const name="hsha3" type="THashFunction">
+  <const name="hsha3" type="THashFunction" file="HashObj.pas" line="61">
     <value>
       hsha3
     </value>
   </const>
-  <const name="tsha" type="TSHA3Type">
+  <const name="tsha" type="TSHA3Type" file="HashObj.pas" line="130">
     <value>
       tsha
     </value>
   </const>
-  <const name="txof" type="TSHA3Type">
+  <const name="txof" type="TSHA3Type" file="HashObj.pas" line="130">
     <value>
       txof
     </value>
@@ -53,10 +53,10 @@
   <array name="TRIPEMDX" low="0" high="15">
     <element type="Integer" />
   </array>
-  <pointer name="PPByte" type="PByte" indircnt="1" />
-  <enum name="THashFunction">
-    <element value="0" name="hsha2" />
-    <element value="1" name="hsha3" />
+  <pointer name="PPByte" type="PByte" indircnt="1" file="HashObj.pas" line="60" />
+  <enum name="THashFunction" file="HashObj.pas" line="61">
+    <element value="0" name="hsha2" file="HashObj.pas" line="61" />
+    <element value="1" name="hsha3" file="HashObj.pas" line="61" />
   </enum>
   <array name="saltPB" low="0" high="60">
     <element type="AnsiChar" />
@@ -68,33 +68,33 @@
   <array name="TSHA512Block" low="0" high="127">
     <element type="AnsiChar" />
   </array>
-  <pointer name="Pblake2b_state" type="_blake2b_state" indircnt="1" />
-  <struct name="_blake2b_state" size="1108" packed="true">
-    <field name="hash_state" visibility="public" size="36" offset="0">
+  <pointer name="Pblake2b_state" type="_blake2b_state" indircnt="1" file="HashObj.pas" line="68" />
+  <struct name="_blake2b_state" size="1108" packed="true" file="HashObj.pas" line="70">
+    <field name="hash_state" visibility="public" size="36" offset="0" file="HashObj.pas" line="71">
       <array name="hash_state" visibility="public" low="0" high="8">
         <element type="Integer" />
       </array>
     </field>
-    <field name="number_bytes" visibility="public" size="12" offset="36">
+    <field name="number_bytes" visibility="public" size="12" offset="36" file="HashObj.pas" line="72">
       <array name="number_bytes" visibility="public" low="0" high="2">
         <element type="Integer" />
       </array>
     </field>
-    <field name="f" visibility="public" size="12" offset="48">
+    <field name="f" visibility="public" size="12" offset="48" file="HashObj.pas" line="73">
       <array name="f" visibility="public" low="0" high="2">
         <element type="Integer" />
       </array>
     </field>
-    <field name="buf" visibility="public" size="1032" offset="60">
+    <field name="buf" visibility="public" size="1032" offset="60" file="HashObj.pas" line="74">
       <array name="buf" visibility="public" low="0" high="128">
         <element type="PAnsiChar" />
       </array>
     </field>
-    <field name="bufSizeBytes" type="Integer" visibility="public" size="4" offset="1092" />
-    <field name="outputSizeBytes" type="Integer" visibility="public" size="4" offset="1096" />
-    <field name="last_node" type="PAnsiChar" visibility="public" size="8" offset="1100" />
+    <field name="bufSizeBytes" type="Integer" visibility="public" size="4" offset="1092" file="HashObj.pas" line="75" />
+    <field name="outputSizeBytes" type="Integer" visibility="public" size="4" offset="1096" file="HashObj.pas" line="76" />
+    <field name="last_node" type="PAnsiChar" visibility="public" size="8" offset="1100" file="HashObj.pas" line="77" />
   </struct>
-  <class name="TSHA2Hash">
+  <class name="TSHA2Hash" file="HashObj.pas" line="99">
     <ancestor name="TTMSCryptBase" namespace="CryptBase">
       <methodref name="GetVersion" visibility="published" />
       <methodref name="SetVersion" visibility="published" />
@@ -412,63 +412,63 @@
       </ancestor>
     </ancestor>
     <members>
-      <field name="FHashSizeBits" type="Integer" visibility="private" size="4" offset="120" />
-      <field name="FOutputFormat" type="TConvertType" visibility="private" size="1" offset="124" />
-      <field name="FUni" type="TUnicode" visibility="private" size="1" offset="125" />
-      <field name="FProgress" type="Integer" visibility="private" size="4" offset="128" />
-      <field name="FOnChange" type="TNotifyEvent" visibility="private" size="16" offset="136" />
-      <procedure name="SetHashSizeBits" visibility="private">
+      <field name="FHashSizeBits" type="Integer" visibility="private" size="4" offset="120" file="HashObj.pas" line="101" />
+      <field name="FOutputFormat" type="TConvertType" visibility="private" size="1" offset="124" file="HashObj.pas" line="102" />
+      <field name="FUni" type="TUnicode" visibility="private" size="1" offset="125" file="HashObj.pas" line="103" />
+      <field name="FProgress" type="Integer" visibility="private" size="4" offset="128" file="HashObj.pas" line="104" />
+      <field name="FOnChange" type="TNotifyEvent" visibility="private" size="16" offset="136" file="HashObj.pas" line="105" />
+      <procedure name="SetHashSizeBits" visibility="private" file="HashObj.pas" line="106">
         <parameters>
           <parameter name="Value" type="Integer" paramflags="const" />
         </parameters>
       </procedure>
-      <procedure name="SetProgress" visibility="private">
+      <procedure name="SetProgress" visibility="private" file="HashObj.pas" line="107">
         <parameters>
           <parameter name="P" type="Integer" />
         </parameters>
       </procedure>
-      <constructor name="Create" visibility="public">
+      <constructor name="Create" visibility="public" file="HashObj.pas" line="109">
         <parameters>
           <parameter name="AOwner" type="TComponent" />
         </parameters>
       </constructor>
-      <constructor name="Create" visibility="public">
+      <constructor name="Create" visibility="public" file="HashObj.pas" line="110">
         <parameters>
         </parameters>
       </constructor>
-      <constructor name="Create" visibility="public">
+      <constructor name="Create" visibility="public" file="HashObj.pas" line="111">
         <parameters>
           <parameter name="hashSizeBits" type="Integer" />
           <parameter name="outputFormat" type="TConvertType" />
           <parameter name="uni" type="TUnicode" />
         </parameters>
       </constructor>
-      <function name="Hash" visibility="public">
+      <function name="Hash" visibility="public" file="HashObj.pas" line="113">
         <parameters>
           <parameter name="s" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="HashFile" visibility="public">
+      <function name="HashFile" visibility="public" file="HashObj.pas" line="114">
         <parameters>
           <parameter name="s" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="HashStream" visibility="public">
+      <function name="HashStream" visibility="public" file="HashObj.pas" line="115">
         <parameters>
           <parameter name="s" type="TStream" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="HMAC" visibility="public">
+      <function name="HMAC" visibility="public" file="HashObj.pas" line="116">
         <parameters>
           <parameter name="s" type="string" />
           <parameter name="k" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="VerifyHMAC" visibility="public">
+      <function name="VerifyHMAC" visibility="public" file="HashObj.pas" line="117">
         <parameters>
           <parameter name="s" type="string" />
           <parameter name="k" type="string" />
@@ -476,18 +476,18 @@
           <retval type="Integer" />
         </parameters>
       </function>
-      <property name="hashSizeBits" visibility="published" read="FHashSizeBits" write="SetHashSizeBits" type="Integer" default="256" />
-      <property name="outputFormat" visibility="published" read="FOutputFormat" write="FOutputFormat" type="TConvertType" default="1" />
-      <property name="Unicode" visibility="published" read="FUni" write="FUni" type="TUnicode" default="1" />
-      <property name="Progress" visibility="published" read="FProgress" write="SetProgress" type="Integer" default="0" />
-      <event name="OnChange" visibility="published" read="FOnChange" write="FOnChange" type="TNotifyEvent" />
+      <property name="hashSizeBits" visibility="published" read="FHashSizeBits" write="SetHashSizeBits" type="Integer" default="256" file="HashObj.pas" line="119" />
+      <property name="outputFormat" visibility="published" read="FOutputFormat" write="FOutputFormat" type="TConvertType" default="1" file="HashObj.pas" line="121" />
+      <property name="Unicode" visibility="published" read="FUni" write="FUni" type="TUnicode" default="1" file="HashObj.pas" line="123" />
+      <property name="Progress" visibility="published" read="FProgress" write="SetProgress" type="Integer" default="0" file="HashObj.pas" line="124" />
+      <event name="OnChange" visibility="published" read="FOnChange" write="FOnChange" type="TNotifyEvent" file="HashObj.pas" line="125" />
     </members>
   </class>
-  <enum name="TSHA3Type">
-    <element value="0" name="tsha" />
-    <element value="1" name="txof" />
+  <enum name="TSHA3Type" file="HashObj.pas" line="130">
+    <element value="0" name="tsha" file="HashObj.pas" line="130" />
+    <element value="1" name="txof" file="HashObj.pas" line="130" />
   </enum>
-  <class name="TSHA3Hash">
+  <class name="TSHA3Hash" file="HashObj.pas" line="132">
     <ancestor name="TTMSCryptBase" namespace="CryptBase">
       <methodref name="GetVersion" visibility="published" />
       <methodref name="SetVersion" visibility="published" />
@@ -805,50 +805,50 @@
       </ancestor>
     </ancestor>
     <members>
-      <field name="FHashSizeBits" type="Integer" visibility="private" size="4" offset="120" />
-      <field name="FType" type="TSHA3Type" visibility="private" size="1" offset="124" />
-      <field name="FVersion" type="Integer" visibility="private" size="4" offset="128" />
-      <field name="FUni" type="TUnicode" visibility="private" size="1" offset="132" />
-      <field name="FOutputFormat" type="TConvertType" visibility="private" size="1" offset="133" />
-      <field name="FProgress" type="Integer" visibility="private" size="4" offset="136" />
-      <field name="FOnChange" type="TNotifyEvent" visibility="private" size="16" offset="144" />
-      <procedure name="SetHashSizeBits" visibility="private">
+      <field name="FHashSizeBits" type="Integer" visibility="private" size="4" offset="120" file="HashObj.pas" line="134" />
+      <field name="FType" type="TSHA3Type" visibility="private" size="1" offset="124" file="HashObj.pas" line="135" />
+      <field name="FVersion" type="Integer" visibility="private" size="4" offset="128" file="HashObj.pas" line="136" />
+      <field name="FUni" type="TUnicode" visibility="private" size="1" offset="132" file="HashObj.pas" line="137" />
+      <field name="FOutputFormat" type="TConvertType" visibility="private" size="1" offset="133" file="HashObj.pas" line="138" />
+      <field name="FProgress" type="Integer" visibility="private" size="4" offset="136" file="HashObj.pas" line="139" />
+      <field name="FOnChange" type="TNotifyEvent" visibility="private" size="16" offset="144" file="HashObj.pas" line="140" />
+      <procedure name="SetHashSizeBits" visibility="private" file="HashObj.pas" line="141">
         <parameters>
           <parameter name="Value" type="Integer" paramflags="const" />
         </parameters>
       </procedure>
-      <procedure name="SetType" visibility="private">
+      <procedure name="SetType" visibility="private" file="HashObj.pas" line="142">
         <parameters>
           <parameter name="Value" type="TSHA3Type" paramflags="const" />
         </parameters>
       </procedure>
-      <procedure name="SetVersion" visibility="private">
+      <procedure name="SetVersion" visibility="private" file="HashObj.pas" line="143">
         <parameters>
           <parameter name="Value" type="Integer" paramflags="const" />
         </parameters>
       </procedure>
-      <procedure name="SetProgress" visibility="private">
+      <procedure name="SetProgress" visibility="private" file="HashObj.pas" line="144">
         <parameters>
           <parameter name="P" type="Integer" />
         </parameters>
       </procedure>
-      <constructor name="Create" visibility="public">
+      <constructor name="Create" visibility="public" file="HashObj.pas" line="146">
         <parameters>
           <parameter name="AOwner" type="TComponent" />
         </parameters>
       </constructor>
-      <constructor name="Create" visibility="public">
+      <constructor name="Create" visibility="public" file="HashObj.pas" line="147">
         <parameters>
         </parameters>
       </constructor>
-      <constructor name="Create" visibility="public">
+      <constructor name="Create" visibility="public" file="HashObj.pas" line="148">
         <parameters>
           <parameter name="hashSizeBits" type="Integer" />
           <parameter name="outputFormat" type="TConvertType" />
           <parameter name="uni" type="TUnicode" />
         </parameters>
       </constructor>
-      <constructor name="Create" visibility="public">
+      <constructor name="Create" visibility="public" file="HashObj.pas" line="150">
         <parameters>
           <parameter name="hashSizeBits" type="Integer" />
           <parameter name="outputFormat" type="TConvertType" />
@@ -856,32 +856,32 @@
           <parameter name="version" type="Integer" />
         </parameters>
       </constructor>
-      <function name="Hash" visibility="public">
+      <function name="Hash" visibility="public" file="HashObj.pas" line="152">
         <parameters>
           <parameter name="s" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="HashFile" visibility="public">
+      <function name="HashFile" visibility="public" file="HashObj.pas" line="153">
         <parameters>
           <parameter name="s" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="HashStream" visibility="public">
+      <function name="HashStream" visibility="public" file="HashObj.pas" line="154">
         <parameters>
           <parameter name="s" type="TStream" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="cSHAKEHash" visibility="public">
+      <function name="cSHAKEHash" visibility="public" file="HashObj.pas" line="155">
         <parameters>
           <parameter name="s" type="string" />
           <parameter name="salt" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="KMACHash" visibility="public">
+      <function name="KMACHash" visibility="public" file="HashObj.pas" line="156">
         <parameters>
           <parameter name="k" type="string" />
           <parameter name="s" type="string" />
@@ -889,7 +889,7 @@
           <retval type="string" />
         </parameters>
       </function>
-      <function name="TupleHash" visibility="public">
+      <function name="TupleHash" visibility="public" file="HashObj.pas" line="157">
         <parameters>
           <parameter name="s">
             <array name="s">
@@ -900,14 +900,14 @@
           <retval type="string" />
         </parameters>
       </function>
-      <function name="HMAC" visibility="public">
+      <function name="HMAC" visibility="public" file="HashObj.pas" line="158">
         <parameters>
           <parameter name="s" type="string" />
           <parameter name="k" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="VerifyHMAC" visibility="public">
+      <function name="VerifyHMAC" visibility="public" file="HashObj.pas" line="159">
         <parameters>
           <parameter name="s" type="string" />
           <parameter name="k" type="string" />
@@ -915,16 +915,16 @@
           <retval type="Integer" />
         </parameters>
       </function>
-      <property name="AType" visibility="published" read="FType" write="SetType" type="TSHA3Type" default="0" />
-      <property name="hashSizeBits" visibility="published" read="FHashSizeBits" write="SetHashSizeBits" type="Integer" default="256" />
-      <property name="version" visibility="published" read="FVersion" write="SetVersion" type="Integer" default="256" />
-      <property name="outputFormat" visibility="published" read="FOutputFormat" write="FOutputFormat" type="TConvertType" default="1" />
-      <property name="Unicode" visibility="published" read="FUni" write="FUni" type="TUnicode" default="1" />
-      <property name="Progress" visibility="published" read="FProgress" write="SetProgress" type="Integer" default="0" />
-      <event name="OnChange" visibility="published" read="FOnChange" write="FOnChange" type="TNotifyEvent" />
+      <property name="AType" visibility="published" read="FType" write="SetType" type="TSHA3Type" default="0" file="HashObj.pas" line="161" />
+      <property name="hashSizeBits" visibility="published" read="FHashSizeBits" write="SetHashSizeBits" type="Integer" default="256" file="HashObj.pas" line="162" />
+      <property name="version" visibility="published" read="FVersion" write="SetVersion" type="Integer" default="256" file="HashObj.pas" line="164" />
+      <property name="outputFormat" visibility="published" read="FOutputFormat" write="FOutputFormat" type="TConvertType" default="1" file="HashObj.pas" line="165" />
+      <property name="Unicode" visibility="published" read="FUni" write="FUni" type="TUnicode" default="1" file="HashObj.pas" line="167" />
+      <property name="Progress" visibility="published" read="FProgress" write="SetProgress" type="Integer" default="0" file="HashObj.pas" line="168" />
+      <event name="OnChange" visibility="published" read="FOnChange" write="FOnChange" type="TNotifyEvent" file="HashObj.pas" line="169" />
     </members>
   </class>
-  <class name="TBlake2BHash">
+  <class name="TBlake2BHash" file="HashObj.pas" line="174">
     <ancestor name="TTMSCryptBase" namespace="CryptBase">
       <methodref name="GetVersion" visibility="published" />
       <methodref name="SetVersion" visibility="published" />
@@ -1242,38 +1242,38 @@
       </ancestor>
     </ancestor>
     <members>
-      <field name="FOutputFormat" type="TConvertType" visibility="private" size="1" offset="120" />
-      <field name="FKey" type="string" visibility="private" size="8" offset="128" />
-      <field name="FKeylen" type="Integer" visibility="private" size="4" offset="136" />
-      <field name="FHashSizeBytes" type="Integer" visibility="private" size="4" offset="140" />
-      <field name="FUni" type="TUnicode" visibility="private" size="1" offset="144" />
-      <field name="FProgress" type="Integer" visibility="private" size="4" offset="148" />
-      <field name="FOnChange" type="TNotifyEvent" visibility="private" size="16" offset="152" />
-      <procedure name="SetHashSizeBytes" visibility="private">
+      <field name="FOutputFormat" type="TConvertType" visibility="private" size="1" offset="120" file="HashObj.pas" line="176" />
+      <field name="FKey" type="string" visibility="private" size="8" offset="128" file="HashObj.pas" line="177" />
+      <field name="FKeylen" type="Integer" visibility="private" size="4" offset="136" file="HashObj.pas" line="178" />
+      <field name="FHashSizeBytes" type="Integer" visibility="private" size="4" offset="140" file="HashObj.pas" line="179" />
+      <field name="FUni" type="TUnicode" visibility="private" size="1" offset="144" file="HashObj.pas" line="180" />
+      <field name="FProgress" type="Integer" visibility="private" size="4" offset="148" file="HashObj.pas" line="181" />
+      <field name="FOnChange" type="TNotifyEvent" visibility="private" size="16" offset="152" file="HashObj.pas" line="182" />
+      <procedure name="SetHashSizeBytes" visibility="private" file="HashObj.pas" line="183">
         <parameters>
           <parameter name="Value" type="Integer" paramflags="const" />
         </parameters>
       </procedure>
-      <procedure name="SetKey" visibility="private">
+      <procedure name="SetKey" visibility="private" file="HashObj.pas" line="184">
         <parameters>
           <parameter name="Value" type="string" paramflags="const" />
         </parameters>
       </procedure>
-      <procedure name="SetProgress" visibility="private">
+      <procedure name="SetProgress" visibility="private" file="HashObj.pas" line="185">
         <parameters>
           <parameter name="P" type="Integer" />
         </parameters>
       </procedure>
-      <constructor name="Create" visibility="public">
+      <constructor name="Create" visibility="public" file="HashObj.pas" line="187">
         <parameters>
           <parameter name="AOwner" type="TComponent" />
         </parameters>
       </constructor>
-      <constructor name="Create" visibility="public">
+      <constructor name="Create" visibility="public" file="HashObj.pas" line="188">
         <parameters>
         </parameters>
       </constructor>
-      <constructor name="Create" visibility="public">
+      <constructor name="Create" visibility="public" file="HashObj.pas" line="189">
         <parameters>
           <parameter name="hashSizeBytes" type="Integer" />
           <parameter name="key" type="string" />
@@ -1281,33 +1281,33 @@
           <parameter name="uni" type="TUnicode" />
         </parameters>
       </constructor>
-      <function name="Hash" visibility="public">
+      <function name="Hash" visibility="public" file="HashObj.pas" line="191">
         <parameters>
           <parameter name="s" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="HashFile" visibility="public">
+      <function name="HashFile" visibility="public" file="HashObj.pas" line="192">
         <parameters>
           <parameter name="s" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="HashStream" visibility="public">
+      <function name="HashStream" visibility="public" file="HashObj.pas" line="193">
         <parameters>
           <parameter name="s" type="TStream" />
           <retval type="string" />
         </parameters>
       </function>
-      <property name="hashSizeBytes" visibility="published" read="FHashSizeBytes" write="SetHashSizeBytes" type="Integer" default="16" />
-      <property name="outputFormat" visibility="published" read="FOutputFormat" write="FOutputFormat" type="TConvertType" default="1" />
-      <property name="key" visibility="published" read="FKey" write="SetKey" type="string" default="0" />
-      <property name="Unicode" visibility="published" read="FUni" write="FUni" type="TUnicode" default="1" />
-      <property name="Progress" visibility="published" read="FProgress" write="SetProgress" type="Integer" default="0" />
-      <event name="OnChange" visibility="published" read="FOnChange" write="FOnChange" type="TNotifyEvent" />
+      <property name="hashSizeBytes" visibility="published" read="FHashSizeBytes" write="SetHashSizeBytes" type="Integer" default="16" file="HashObj.pas" line="195" />
+      <property name="outputFormat" visibility="published" read="FOutputFormat" write="FOutputFormat" type="TConvertType" default="1" file="HashObj.pas" line="197" />
+      <property name="key" visibility="published" read="FKey" write="SetKey" type="string" default="0" file="HashObj.pas" line="199" />
+      <property name="Unicode" visibility="published" read="FUni" write="FUni" type="TUnicode" default="1" file="HashObj.pas" line="200" />
+      <property name="Progress" visibility="published" read="FProgress" write="SetProgress" type="Integer" default="0" file="HashObj.pas" line="201" />
+      <event name="OnChange" visibility="published" read="FOnChange" write="FOnChange" type="TNotifyEvent" file="HashObj.pas" line="202" />
     </members>
   </class>
-  <class name="TRIPEMD160Hash">
+  <class name="TRIPEMD160Hash" file="HashObj.pas" line="207">
     <ancestor name="TTMSCryptBase" namespace="CryptBase">
       <methodref name="GetVersion" visibility="published" />
       <methodref name="SetVersion" visibility="published" />
@@ -1625,55 +1625,55 @@
       </ancestor>
     </ancestor>
     <members>
-      <field name="FOutputFormat" type="TConvertType" visibility="private" size="1" offset="120" />
-      <field name="FUni" type="TUnicode" visibility="private" size="1" offset="121" />
-      <field name="FProgress" type="Integer" visibility="private" size="4" offset="124" />
-      <field name="FOnChange" type="TNotifyEvent" visibility="private" size="16" offset="128" />
-      <procedure name="SetProgress" visibility="private">
+      <field name="FOutputFormat" type="TConvertType" visibility="private" size="1" offset="120" file="HashObj.pas" line="209" />
+      <field name="FUni" type="TUnicode" visibility="private" size="1" offset="121" file="HashObj.pas" line="210" />
+      <field name="FProgress" type="Integer" visibility="private" size="4" offset="124" file="HashObj.pas" line="211" />
+      <field name="FOnChange" type="TNotifyEvent" visibility="private" size="16" offset="128" file="HashObj.pas" line="212" />
+      <procedure name="SetProgress" visibility="private" file="HashObj.pas" line="213">
         <parameters>
           <parameter name="P" type="Integer" />
         </parameters>
       </procedure>
-      <constructor name="Create" visibility="public">
+      <constructor name="Create" visibility="public" file="HashObj.pas" line="215">
         <parameters>
           <parameter name="AOwner" type="TComponent" />
         </parameters>
       </constructor>
-      <constructor name="Create" visibility="public">
+      <constructor name="Create" visibility="public" file="HashObj.pas" line="216">
         <parameters>
         </parameters>
       </constructor>
-      <constructor name="Create" visibility="public">
+      <constructor name="Create" visibility="public" file="HashObj.pas" line="217">
         <parameters>
           <parameter name="outputFormat" type="TConvertType" />
           <parameter name="uni" type="TUnicode" />
         </parameters>
       </constructor>
-      <function name="Hash" visibility="public">
+      <function name="Hash" visibility="public" file="HashObj.pas" line="219">
         <parameters>
           <parameter name="s" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="HashFile" visibility="public">
+      <function name="HashFile" visibility="public" file="HashObj.pas" line="220">
         <parameters>
           <parameter name="s" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="HashStream" visibility="public">
+      <function name="HashStream" visibility="public" file="HashObj.pas" line="221">
         <parameters>
           <parameter name="s" type="TStream" />
           <retval type="string" />
         </parameters>
       </function>
-      <property name="outputFormat" visibility="published" read="FOutputFormat" write="FOutputFormat" type="TConvertType" default="1" />
-      <property name="Unicode" visibility="published" read="FUni" write="FUni" type="TUnicode" default="1" />
-      <property name="Progress" visibility="published" read="FProgress" write="SetProgress" type="Integer" default="0" />
-      <event name="OnChange" visibility="published" read="FOnChange" write="FOnChange" type="TNotifyEvent" />
+      <property name="outputFormat" visibility="published" read="FOutputFormat" write="FOutputFormat" type="TConvertType" default="1" file="HashObj.pas" line="223" />
+      <property name="Unicode" visibility="published" read="FUni" write="FUni" type="TUnicode" default="1" file="HashObj.pas" line="225" />
+      <property name="Progress" visibility="published" read="FProgress" write="SetProgress" type="Integer" default="0" file="HashObj.pas" line="226" />
+      <event name="OnChange" visibility="published" read="FOnChange" write="FOnChange" type="TNotifyEvent" file="HashObj.pas" line="227" />
     </members>
   </class>
-  <class name="TPBKDF2KeyDerivationOLD">
+  <class name="TPBKDF2KeyDerivationOLD" file="HashObj.pas" line="232">
     <ancestor name="TTMSCryptBase" namespace="CryptBase">
       <methodref name="GetVersion" visibility="published" />
       <methodref name="SetVersion" visibility="published" />
@@ -1991,37 +1991,37 @@
       </ancestor>
     </ancestor>
     <members>
-      <field name="FOutputSizeBits" type="Integer" visibility="private" size="4" offset="120" />
-      <field name="FSalt" type="saltPB" visibility="private" size="61" offset="124" />
-      <field name="FStringSalt" type="string" visibility="private" size="8" offset="192" />
-      <field name="FCounter" type="Integer" visibility="private" size="4" offset="200" />
-      <field name="FUni" type="TUnicode" visibility="private" size="1" offset="204" />
-      <field name="FOutputFormat" type="TConvertType" visibility="private" size="1" offset="205" />
-      <procedure name="SetOutputSizeBits" visibility="private">
+      <field name="FOutputSizeBits" type="Integer" visibility="private" size="4" offset="120" file="HashObj.pas" line="234" />
+      <field name="FSalt" type="saltPB" visibility="private" size="61" offset="124" file="HashObj.pas" line="235" />
+      <field name="FStringSalt" type="string" visibility="private" size="8" offset="192" file="HashObj.pas" line="236" />
+      <field name="FCounter" type="Integer" visibility="private" size="4" offset="200" file="HashObj.pas" line="237" />
+      <field name="FUni" type="TUnicode" visibility="private" size="1" offset="204" file="HashObj.pas" line="238" />
+      <field name="FOutputFormat" type="TConvertType" visibility="private" size="1" offset="205" file="HashObj.pas" line="239" />
+      <procedure name="SetOutputSizeBits" visibility="private" file="HashObj.pas" line="240">
         <parameters>
           <parameter name="Value" type="Integer" paramflags="const" />
         </parameters>
       </procedure>
-      <procedure name="SetStringSalt" visibility="private">
+      <procedure name="SetStringSalt" visibility="private" file="HashObj.pas" line="241">
         <parameters>
           <parameter name="Value" type="string" paramflags="const" />
         </parameters>
       </procedure>
-      <procedure name="SetCounter" visibility="private">
+      <procedure name="SetCounter" visibility="private" file="HashObj.pas" line="242">
         <parameters>
           <parameter name="Value" type="Integer" paramflags="const" />
         </parameters>
       </procedure>
-      <constructor name="Create" visibility="public">
+      <constructor name="Create" visibility="public" file="HashObj.pas" line="244">
         <parameters>
           <parameter name="AOwner" type="TComponent" />
         </parameters>
       </constructor>
-      <constructor name="Create" visibility="public">
+      <constructor name="Create" visibility="public" file="HashObj.pas" line="245">
         <parameters>
         </parameters>
       </constructor>
-      <constructor name="Create" visibility="public">
+      <constructor name="Create" visibility="public" file="HashObj.pas" line="246">
         <parameters>
           <parameter name="outputSizeBits" type="Integer" />
           <parameter name="salt" type="string" />
@@ -2030,20 +2030,20 @@
           <parameter name="uni" type="TUnicode" />
         </parameters>
       </constructor>
-      <function name="GenerateKey" visibility="public">
+      <function name="GenerateKey" visibility="public" file="HashObj.pas" line="248">
         <parameters>
           <parameter name="s" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <property name="outputSizeBits" visibility="published" read="FOutputSizeBits" write="SetOutputSizeBits" type="Integer" />
-      <property name="StringSalt" visibility="published" read="FStringSalt" write="SetStringSalt" type="string" default="0" />
-      <property name="counter" visibility="published" read="FCounter" write="SetCounter" type="Integer" />
-      <property name="outputFormat" visibility="published" read="FOutputFormat" write="FOutputFormat" type="TConvertType" />
-      <property name="Unicode" visibility="published" read="FUni" write="FUni" type="TUnicode" />
+      <property name="outputSizeBits" visibility="published" read="FOutputSizeBits" write="SetOutputSizeBits" type="Integer" file="HashObj.pas" line="250" />
+      <property name="StringSalt" visibility="published" read="FStringSalt" write="SetStringSalt" type="string" default="0" file="HashObj.pas" line="252" />
+      <property name="counter" visibility="published" read="FCounter" write="SetCounter" type="Integer" file="HashObj.pas" line="253" />
+      <property name="outputFormat" visibility="published" read="FOutputFormat" write="FOutputFormat" type="TConvertType" file="HashObj.pas" line="254" />
+      <property name="Unicode" visibility="published" read="FUni" write="FUni" type="TUnicode" file="HashObj.pas" line="255" />
     </members>
   </class>
-  <class name="TPBKDF2KeyDerivation">
+  <class name="TPBKDF2KeyDerivation" file="HashObj.pas" line="260">
     <ancestor name="TTMSCryptBase" namespace="CryptBase">
       <methodref name="GetVersion" visibility="published" />
       <methodref name="SetVersion" visibility="published" />
@@ -2361,24 +2361,24 @@
       </ancestor>
     </ancestor>
     <members>
-      <field name="FOutputSizeBits" type="Integer" visibility="private" size="4" offset="120" />
-      <field name="FSalt" type="string" visibility="private" size="8" offset="128" />
-      <field name="FCounter" type="Integer" visibility="private" size="4" offset="136" />
-      <field name="FUni" type="TUnicode" visibility="private" size="1" offset="140" />
-      <field name="FOutputFormat" type="TConvertType" visibility="private" size="1" offset="141" />
-      <field name="FHashFunction" type="THashFunction" visibility="private" size="1" offset="142" />
-      <field name="FHashSizeBits" type="Integer" visibility="private" size="4" offset="144" />
-      <procedure name="SetOutputSizeBits" visibility="private">
+      <field name="FOutputSizeBits" type="Integer" visibility="private" size="4" offset="120" file="HashObj.pas" line="262" />
+      <field name="FSalt" type="string" visibility="private" size="8" offset="128" file="HashObj.pas" line="263" />
+      <field name="FCounter" type="Integer" visibility="private" size="4" offset="136" file="HashObj.pas" line="264" />
+      <field name="FUni" type="TUnicode" visibility="private" size="1" offset="140" file="HashObj.pas" line="265" />
+      <field name="FOutputFormat" type="TConvertType" visibility="private" size="1" offset="141" file="HashObj.pas" line="266" />
+      <field name="FHashFunction" type="THashFunction" visibility="private" size="1" offset="142" file="HashObj.pas" line="267" />
+      <field name="FHashSizeBits" type="Integer" visibility="private" size="4" offset="144" file="HashObj.pas" line="268" />
+      <procedure name="SetOutputSizeBits" visibility="private" file="HashObj.pas" line="269">
         <parameters>
           <parameter name="Value" type="Integer" paramflags="const" />
         </parameters>
       </procedure>
-      <procedure name="SetHashSizeBits" visibility="private">
+      <procedure name="SetHashSizeBits" visibility="private" file="HashObj.pas" line="270">
         <parameters>
           <parameter name="Value" type="Integer" paramflags="const" />
         </parameters>
       </procedure>
-      <constructor name="Create" visibility="public">
+      <constructor name="Create" visibility="public" file="HashObj.pas" line="272">
         <devnotes>
            / *** new PBKDF2 derivation class **** /////
         </devnotes>
@@ -2386,11 +2386,11 @@
           <parameter name="AOwner" type="TComponent" />
         </parameters>
       </constructor>
-      <constructor name="Create" visibility="public">
+      <constructor name="Create" visibility="public" file="HashObj.pas" line="273">
         <parameters>
         </parameters>
       </constructor>
-      <constructor name="Create" visibility="public">
+      <constructor name="Create" visibility="public" file="HashObj.pas" line="274">
         <parameters>
           <parameter name="outputSizeBits" type="Integer" />
           <parameter name="salt" type="string" />
@@ -2401,22 +2401,22 @@
           <parameter name="hashSB" type="Integer" />
         </parameters>
       </constructor>
-      <function name="GenerateKey" visibility="public">
+      <function name="GenerateKey" visibility="public" file="HashObj.pas" line="277">
         <parameters>
           <parameter name="s" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <property name="outputSizeBits" visibility="published" read="FOutputSizeBits" write="SetOutputSizeBits" type="Integer" default="128" />
-      <property name="salt" visibility="published" read="FSalt" write="FSalt" type="string" default="0" />
-      <property name="counter" visibility="published" read="FCounter" write="FCounter" type="Integer" default="10000" />
-      <property name="hashFunction" visibility="published" read="FHashFunction" write="FHashFunction" type="THashFunction" default="0" />
-      <property name="hashSizeBits" visibility="published" read="FHashSizeBits" write="SetHashSizeBits" type="Integer" default="256" />
-      <property name="outputFormat" visibility="published" read="FOutputFormat" write="FOutputFormat" type="TConvertType" default="1" />
-      <property name="Unicode" visibility="published" read="FUni" write="FUni" type="TUnicode" default="1" />
+      <property name="outputSizeBits" visibility="published" read="FOutputSizeBits" write="SetOutputSizeBits" type="Integer" default="128" file="HashObj.pas" line="279" />
+      <property name="salt" visibility="published" read="FSalt" write="FSalt" type="string" default="0" file="HashObj.pas" line="281" />
+      <property name="counter" visibility="published" read="FCounter" write="FCounter" type="Integer" default="10000" file="HashObj.pas" line="282" />
+      <property name="hashFunction" visibility="published" read="FHashFunction" write="FHashFunction" type="THashFunction" default="0" file="HashObj.pas" line="283" />
+      <property name="hashSizeBits" visibility="published" read="FHashSizeBits" write="SetHashSizeBits" type="Integer" default="256" file="HashObj.pas" line="285" />
+      <property name="outputFormat" visibility="published" read="FOutputFormat" write="FOutputFormat" type="TConvertType" default="1" file="HashObj.pas" line="287" />
+      <property name="Unicode" visibility="published" read="FUni" write="FUni" type="TUnicode" default="1" file="HashObj.pas" line="289" />
     </members>
   </class>
-  <class name="TArgon2KeyDerivation">
+  <class name="TArgon2KeyDerivation" file="HashObj.pas" line="294">
     <ancestor name="TTMSCryptBase" namespace="CryptBase">
       <methodref name="GetVersion" visibility="published" />
       <methodref name="SetVersion" visibility="published" />
@@ -2734,44 +2734,44 @@
       </ancestor>
     </ancestor>
     <members>
-      <field name="FOutputSizeBytes" type="Integer" visibility="private" size="4" offset="120" />
-      <field name="FMemory" type="Integer" visibility="private" size="4" offset="124" />
-      <field name="FSalt" type="PAnsiChar" visibility="private" size="8" offset="128" />
-      <field name="FStringSalt" type="string" visibility="private" size="8" offset="136" />
-      <field name="FCounter" type="Integer" visibility="private" size="4" offset="144" />
-      <field name="FUni" type="TUnicode" visibility="private" size="1" offset="148" />
-      <field name="FOutputFormat" type="TConvertType" visibility="private" size="1" offset="149" />
-      <field name="FUseDeprecatedSalt" type="Boolean" visibility="private" size="1" offset="150" />
-      <procedure name="SetOutputSizeBytes" visibility="private">
+      <field name="FOutputSizeBytes" type="Integer" visibility="private" size="4" offset="120" file="HashObj.pas" line="296" />
+      <field name="FMemory" type="Integer" visibility="private" size="4" offset="124" file="HashObj.pas" line="297" />
+      <field name="FSalt" type="PAnsiChar" visibility="private" size="8" offset="128" file="HashObj.pas" line="298" />
+      <field name="FStringSalt" type="string" visibility="private" size="8" offset="136" file="HashObj.pas" line="299" />
+      <field name="FCounter" type="Integer" visibility="private" size="4" offset="144" file="HashObj.pas" line="300" />
+      <field name="FUni" type="TUnicode" visibility="private" size="1" offset="148" file="HashObj.pas" line="301" />
+      <field name="FOutputFormat" type="TConvertType" visibility="private" size="1" offset="149" file="HashObj.pas" line="302" />
+      <field name="FUseDeprecatedSalt" type="Boolean" visibility="private" size="1" offset="150" file="HashObj.pas" line="303" />
+      <procedure name="SetOutputSizeBytes" visibility="private" file="HashObj.pas" line="304">
         <parameters>
           <parameter name="Value" type="Integer" paramflags="const" />
         </parameters>
       </procedure>
-      <procedure name="SetStringSalt" visibility="private">
+      <procedure name="SetStringSalt" visibility="private" file="HashObj.pas" line="305">
         <parameters>
           <parameter name="Value" type="string" paramflags="const" />
         </parameters>
       </procedure>
-      <procedure name="SetCounter" visibility="private">
+      <procedure name="SetCounter" visibility="private" file="HashObj.pas" line="306">
         <parameters>
           <parameter name="Value" type="Integer" paramflags="const" />
         </parameters>
       </procedure>
-      <procedure name="SetMemory" visibility="private">
+      <procedure name="SetMemory" visibility="private" file="HashObj.pas" line="307">
         <parameters>
           <parameter name="Value" type="Integer" paramflags="const" />
         </parameters>
       </procedure>
-      <constructor name="Create" visibility="public">
+      <constructor name="Create" visibility="public" file="HashObj.pas" line="309">
         <parameters>
           <parameter name="AOwner" type="TComponent" />
         </parameters>
       </constructor>
-      <constructor name="Create" visibility="public">
+      <constructor name="Create" visibility="public" file="HashObj.pas" line="310">
         <parameters>
         </parameters>
       </constructor>
-      <constructor name="Create" visibility="public">
+      <constructor name="Create" visibility="public" file="HashObj.pas" line="311">
         <parameters>
           <parameter name="outputSizeBytes" type="Integer" />
           <parameter name="salt" type="string" />
@@ -2781,26 +2781,26 @@
           <parameter name="uni" type="TUnicode" />
         </parameters>
       </constructor>
-      <destructor name="Destroy" visibility="public">
+      <destructor name="Destroy" visibility="public" file="HashObj.pas" line="314">
         <parameters>
         </parameters>
       </destructor>
-      <function name="GenerateKey" visibility="public">
+      <function name="GenerateKey" visibility="public" file="HashObj.pas" line="315">
         <parameters>
           <parameter name="s" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <property name="outputSizeBytes" visibility="published" read="FOutputSizeBytes" write="SetOutputSizeBytes" type="Integer" default="16" />
-      <property name="StringSalt" visibility="published" read="FStringSalt" write="SetStringSalt" type="string" default="0" />
-      <property name="counter" visibility="published" read="FCounter" write="SetCounter" type="Integer" default="10" />
-      <property name="outputFormat" visibility="published" read="FOutputFormat" write="FOutputFormat" type="TConvertType" default="1" />
-      <property name="memory" visibility="published" read="FMemory" write="SetMemory" type="Integer" default="16" />
-      <property name="Unicode" visibility="published" read="FUni" write="FUni" type="TUnicode" default="1" />
-      <property name="useDeprecatedSalt" visibility="published" read="FUseDeprecatedSalt" write="FUseDeprecatedSalt" type="Boolean" default="0" />
+      <property name="outputSizeBytes" visibility="published" read="FOutputSizeBytes" write="SetOutputSizeBytes" type="Integer" default="16" file="HashObj.pas" line="317" />
+      <property name="StringSalt" visibility="published" read="FStringSalt" write="SetStringSalt" type="string" default="0" file="HashObj.pas" line="319" />
+      <property name="counter" visibility="published" read="FCounter" write="SetCounter" type="Integer" default="10" file="HashObj.pas" line="320" />
+      <property name="outputFormat" visibility="published" read="FOutputFormat" write="FOutputFormat" type="TConvertType" default="1" file="HashObj.pas" line="321" />
+      <property name="memory" visibility="published" read="FMemory" write="SetMemory" type="Integer" default="16" file="HashObj.pas" line="323" />
+      <property name="Unicode" visibility="published" read="FUni" write="FUni" type="TUnicode" default="1" file="HashObj.pas" line="324" />
+      <property name="useDeprecatedSalt" visibility="published" read="FUseDeprecatedSalt" write="FUseDeprecatedSalt" type="Boolean" default="0" file="HashObj.pas" line="325" />
     </members>
   </class>
-  <class name="THKDFKeyDerivation">
+  <class name="THKDFKeyDerivation" file="HashObj.pas" line="331">
     <ancestor name="TTMSCryptBase" namespace="CryptBase">
       <methodref name="GetVersion" visibility="published" />
       <methodref name="SetVersion" visibility="published" />
@@ -3118,25 +3118,25 @@
       </ancestor>
     </ancestor>
     <members>
-      <field name="FUni" type="TUnicode" visibility="private" size="1" offset="120" />
-      <field name="FOutputFormat" type="TConvertType" visibility="private" size="1" offset="121" />
-      <field name="FHashFunction" type="THashFunction" visibility="private" size="1" offset="122" />
-      <field name="FHashSizeBits" type="Integer" visibility="private" size="4" offset="124" />
-      <procedure name="SetHashSizeBits" visibility="private">
+      <field name="FUni" type="TUnicode" visibility="private" size="1" offset="120" file="HashObj.pas" line="333" />
+      <field name="FOutputFormat" type="TConvertType" visibility="private" size="1" offset="121" file="HashObj.pas" line="334" />
+      <field name="FHashFunction" type="THashFunction" visibility="private" size="1" offset="122" file="HashObj.pas" line="335" />
+      <field name="FHashSizeBits" type="Integer" visibility="private" size="4" offset="124" file="HashObj.pas" line="336" />
+      <procedure name="SetHashSizeBits" visibility="private" file="HashObj.pas" line="337">
         <parameters>
           <parameter name="Value" type="Integer" paramflags="const" />
         </parameters>
       </procedure>
-      <constructor name="Create" visibility="public">
+      <constructor name="Create" visibility="public" file="HashObj.pas" line="339">
         <parameters>
           <parameter name="AOwner" type="TComponent" />
         </parameters>
       </constructor>
-      <constructor name="Create" visibility="public">
+      <constructor name="Create" visibility="public" file="HashObj.pas" line="340">
         <parameters>
         </parameters>
       </constructor>
-      <constructor name="Create" visibility="public">
+      <constructor name="Create" visibility="public" file="HashObj.pas" line="341">
         <parameters>
           <parameter name="outputFormat" type="TConvertType" />
           <parameter name="uni" type="TUnicode" />
@@ -3144,7 +3144,7 @@
           <parameter name="hashSB" type="Integer" />
         </parameters>
       </constructor>
-      <function name="Expand" visibility="public">
+      <function name="Expand" visibility="public" file="HashObj.pas" line="343">
         <parameters>
           <parameter name="s" type="string" />
           <parameter name="info" type="string" />
@@ -3152,20 +3152,20 @@
           <retval type="string" />
         </parameters>
       </function>
-      <function name="Extract" visibility="public">
+      <function name="Extract" visibility="public" file="HashObj.pas" line="344">
         <parameters>
           <parameter name="s" type="string" />
           <parameter name="salt" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <property name="hashFunction" visibility="published" read="FHashFunction" write="FHashFunction" type="THashFunction" default="0" />
-      <property name="hashSizeBits" visibility="published" read="FHashSizeBits" write="SetHashSizeBits" type="Integer" default="256" />
-      <property name="outputFormat" visibility="published" read="FOutputFormat" write="FOutputFormat" type="TConvertType" default="1" />
-      <property name="Unicode" visibility="published" read="FUni" write="FUni" type="TUnicode" default="1" />
+      <property name="hashFunction" visibility="published" read="FHashFunction" write="FHashFunction" type="THashFunction" default="0" file="HashObj.pas" line="346" />
+      <property name="hashSizeBits" visibility="published" read="FHashSizeBits" write="SetHashSizeBits" type="Integer" default="256" file="HashObj.pas" line="348" />
+      <property name="outputFormat" visibility="published" read="FOutputFormat" write="FOutputFormat" type="TConvertType" default="1" file="HashObj.pas" line="350" />
+      <property name="Unicode" visibility="published" read="FUni" write="FUni" type="TUnicode" default="1" file="HashObj.pas" line="352" />
     </members>
   </class>
-  <function name="SHA2_FileHash" visibility="public" callconv="cdecl">
+  <function name="SHA2_FileHash" visibility="public" callconv="cdecl" file="HashObj.pas" line="675">
     <parameters>
       <parameter name="inputFilePath" type="PAnsiChar" />
       <parameter name="hashSizeBits" type="Integer" />
@@ -3173,7 +3173,7 @@
       <retval type="Integer" />
     </parameters>
   </function>
-  <function name="SHA2_BufferHash" visibility="public" callconv="cdecl">
+  <function name="SHA2_BufferHash" visibility="public" callconv="cdecl" file="HashObj.pas" line="679">
     <parameters>
       <parameter name="inputBuffer" type="PAnsiChar" />
       <parameter name="inputSizeBytes" type="Integer" />
@@ -3182,7 +3182,7 @@
       <retval type="Integer" />
     </parameters>
   </function>
-  <function name="SHA2_HMAC" visibility="public" callconv="cdecl">
+  <function name="SHA2_HMAC" visibility="public" callconv="cdecl" file="HashObj.pas" line="695">
     <parameters>
       <parameter name="inputBuffer" type="PAnsiChar" />
       <parameter name="inputSizeBytes" type="Integer" />
@@ -3193,7 +3193,7 @@
       <retval type="Integer" />
     </parameters>
   </function>
-  <function name="SHA2_VerifyHMAC" visibility="public" callconv="cdecl">
+  <function name="SHA2_VerifyHMAC" visibility="public" callconv="cdecl" file="HashObj.pas" line="698">
     <parameters>
       <parameter name="inputBuffer" type="PAnsiChar" />
       <parameter name="inputSizeBytes" type="Integer" />
@@ -3204,7 +3204,7 @@
       <retval type="Integer" />
     </parameters>
   </function>
-  <function name="SHA1_BufferHash" visibility="public" callconv="cdecl">
+  <function name="SHA1_BufferHash" visibility="public" callconv="cdecl" file="HashObj.pas" line="682">
     <parameters>
       <parameter name="inputBuffer" type="PAnsiChar" />
       <parameter name="inputSizeBytes" type="Integer" />
@@ -3212,50 +3212,50 @@
       <retval type="Integer" />
     </parameters>
   </function>
-  <function name="SHA1_FileHash" visibility="public" callconv="cdecl">
+  <function name="SHA1_FileHash" visibility="public" callconv="cdecl" file="HashObj.pas" line="676">
     <parameters>
       <parameter name="inputFilePath" type="PAnsiChar" />
       <parameter name="fileHash" type="PAnsiChar" />
       <retval type="Integer" />
     </parameters>
   </function>
-  <procedure name="SHA256_BlockHash" visibility="public" callconv="cdecl">
+  <procedure name="SHA256_BlockHash" visibility="public" callconv="cdecl" file="HashObj.pas" line="683">
     <parameters>
       <parameter name="mess" type="TSHA256Block" />
       <parameter name="k" type="TSHA256Key" />
       <parameter name="h" type="TSHA256H" paramflags="var" />
     </parameters>
   </procedure>
-  <procedure name="SHA512_BlockHash" visibility="public" callconv="cdecl">
+  <procedure name="SHA512_BlockHash" visibility="public" callconv="cdecl" file="HashObj.pas" line="685">
     <parameters>
       <parameter name="mess" type="TSHA512Block" />
       <parameter name="k" type="TSHA512Key" />
       <parameter name="h" type="TSHA512H" paramflags="var" />
     </parameters>
   </procedure>
-  <procedure name="SHA384_BlockHash" visibility="public" callconv="cdecl">
+  <procedure name="SHA384_BlockHash" visibility="public" callconv="cdecl" file="HashObj.pas" line="687">
     <parameters>
       <parameter name="mess" type="TSHA512Block" />
       <parameter name="k" type="TSHA512Key" />
       <parameter name="h" type="TSHA512H" paramflags="var" />
     </parameters>
   </procedure>
-  <procedure name="Constants_sha2" visibility="public" callconv="cdecl">
+  <procedure name="Constants_sha2" visibility="public" callconv="cdecl" file="HashObj.pas" line="689">
     <parameters>
       <parameter name="k" type="TSHA256Key" paramflags="var" />
     </parameters>
   </procedure>
-  <procedure name="Constants_sha512" visibility="public" callconv="cdecl">
+  <procedure name="Constants_sha512" visibility="public" callconv="cdecl" file="HashObj.pas" line="691">
     <parameters>
       <parameter name="k" type="TSHA512Key" paramflags="var" />
     </parameters>
   </procedure>
-  <procedure name="KeccakF1600_StatePermute" visibility="public" callconv="cdecl">
+  <procedure name="KeccakF1600_StatePermute" visibility="public" callconv="cdecl" file="HashObj.pas" line="642">
     <parameters>
       <parameter name="state" type="TSHA3Array" paramflags="var" />
     </parameters>
   </procedure>
-  <function name="SHA3_XOF_BufferHash" visibility="public" callconv="cdecl">
+  <function name="SHA3_XOF_BufferHash" visibility="public" callconv="cdecl" file="HashObj.pas" line="619">
     <parameters>
       <parameter name="inputBuffer" type="PAnsiChar" />
       <parameter name="inputSizeBytes" type="Integer" />
@@ -3265,7 +3265,7 @@
       <retval type="Integer" />
     </parameters>
   </function>
-  <function name="SHA3_BufferHash" visibility="public" callconv="cdecl">
+  <function name="SHA3_BufferHash" visibility="public" callconv="cdecl" file="HashObj.pas" line="622">
     <parameters>
       <parameter name="inputBuffer" type="PAnsiChar" />
       <parameter name="inputSizeBytes" type="Integer" />
@@ -3274,7 +3274,7 @@
       <retval type="Integer" />
     </parameters>
   </function>
-  <function name="SHA3_FileHash" visibility="public" callconv="cdecl">
+  <function name="SHA3_FileHash" visibility="public" callconv="cdecl" file="HashObj.pas" line="625">
     <parameters>
       <parameter name="inputFilePath" type="PAnsiChar" />
       <parameter name="hashSizeBits" type="Integer" />
@@ -3282,7 +3282,7 @@
       <retval type="Integer" />
     </parameters>
   </function>
-  <function name="SHA3_XOF_FileHash" visibility="public" callconv="cdecl">
+  <function name="SHA3_XOF_FileHash" visibility="public" callconv="cdecl" file="HashObj.pas" line="627">
     <parameters>
       <parameter name="inputFilePath" type="PAnsiChar" />
       <parameter name="hashSizeBits" type="Integer" />
@@ -3291,7 +3291,7 @@
       <retval type="Integer" />
     </parameters>
   </function>
-  <function name="SHA3_cSHAKE_BufferHash" visibility="public" callconv="cdecl">
+  <function name="SHA3_cSHAKE_BufferHash" visibility="public" callconv="cdecl" file="HashObj.pas" line="631">
     <parameters>
       <parameter name="inputBuffer" type="PAnsiChar" />
       <parameter name="inputSizeBytes" type="Int64" />
@@ -3303,7 +3303,7 @@
       <retval type="Integer" />
     </parameters>
   </function>
-  <function name="SHA3_KMAC_BufferHash" visibility="public" callconv="cdecl">
+  <function name="SHA3_KMAC_BufferHash" visibility="public" callconv="cdecl" file="HashObj.pas" line="636">
     <parameters>
       <parameter name="key" type="PAnsiChar" />
       <parameter name="keySizeBytes" type="Int64" />
@@ -3317,7 +3317,7 @@
       <retval type="Integer" />
     </parameters>
   </function>
-  <function name="SHA3_TupleHASH_BufferHash" visibility="public" callconv="cdecl">
+  <function name="SHA3_TupleHASH_BufferHash" visibility="public" callconv="cdecl" file="HashObj.pas" line="640">
     <parameters>
       <parameter name="inputBuffer" type="PPAnsiChar" />
       <parameter name="inputSizeBytes" type="PInt64" />
@@ -3330,7 +3330,7 @@
       <retval type="Integer" />
     </parameters>
   </function>
-  <function name="SHA3_HMAC" visibility="public" callconv="cdecl">
+  <function name="SHA3_HMAC" visibility="public" callconv="cdecl" file="HashObj.pas" line="704">
     <parameters>
       <parameter name="inputBuffer" type="PAnsiChar" />
       <parameter name="inputSizeBytes" type="Integer" />
@@ -3341,7 +3341,7 @@
       <retval type="Integer" />
     </parameters>
   </function>
-  <function name="SHA3_VerifyHMAC" visibility="public" callconv="cdecl">
+  <function name="SHA3_VerifyHMAC" visibility="public" callconv="cdecl" file="HashObj.pas" line="707">
     <parameters>
       <parameter name="inputBuffer" type="PAnsiChar" />
       <parameter name="inputSizeBytes" type="Integer" />
@@ -3352,19 +3352,7 @@
       <retval type="Integer" />
     </parameters>
   </function>
-  <function name="SHA3_XOF_HMAC" visibility="public" callconv="cdecl">
-    <parameters>
-      <parameter name="inputBuffer" type="PAnsiChar" />
-      <parameter name="inputSizeBytes" type="Integer" />
-      <parameter name="key" type="PAnsiChar" />
-      <parameter name="keySizeBytes" type="Integer" />
-      <parameter name="hashSizeBits" type="Integer" />
-      <parameter name="version" type="Integer" />
-      <parameter name="HMAC" type="PAnsiChar" />
-      <retval type="Integer" />
-    </parameters>
-  </function>
-  <function name="SHA3_XOF_VerifyHMAC" visibility="public" callconv="cdecl">
+  <function name="SHA3_XOF_HMAC" visibility="public" callconv="cdecl" file="HashObj.pas" line="710">
     <parameters>
       <parameter name="inputBuffer" type="PAnsiChar" />
       <parameter name="inputSizeBytes" type="Integer" />
@@ -3376,7 +3364,19 @@
       <retval type="Integer" />
     </parameters>
   </function>
-  <function name="PBKDF2_KeyDerivationFunction" visibility="public" callconv="cdecl">
+  <function name="SHA3_XOF_VerifyHMAC" visibility="public" callconv="cdecl" file="HashObj.pas" line="714">
+    <parameters>
+      <parameter name="inputBuffer" type="PAnsiChar" />
+      <parameter name="inputSizeBytes" type="Integer" />
+      <parameter name="key" type="PAnsiChar" />
+      <parameter name="keySizeBytes" type="Integer" />
+      <parameter name="hashSizeBits" type="Integer" />
+      <parameter name="version" type="Integer" />
+      <parameter name="HMAC" type="PAnsiChar" />
+      <retval type="Integer" />
+    </parameters>
+  </function>
+  <function name="PBKDF2_KeyDerivationFunction" visibility="public" callconv="cdecl" file="HashObj.pas" line="719">
     <parameters>
       <parameter name="password" type="PAnsiChar" />
       <parameter name="inputSizeBytes" type="Integer" />
@@ -3390,7 +3390,7 @@
       <retval type="Integer" />
     </parameters>
   </function>
-  <function name="PBKDF2_KeyDerivationFunction_OLD" visibility="public" callconv="cdecl">
+  <function name="PBKDF2_KeyDerivationFunction_OLD" visibility="public" callconv="cdecl" file="HashObj.pas" line="700">
     <parameters>
       <parameter name="password" type="PAnsiChar" />
       <parameter name="salt" type="saltPB" />
@@ -3400,7 +3400,7 @@
       <retval type="Integer" />
     </parameters>
   </function>
-  <function name="Blake2B_FileHash" visibility="public" callconv="cdecl">
+  <function name="Blake2B_FileHash" visibility="public" callconv="cdecl" file="HashObj.pas" line="645">
     <parameters>
       <parameter name="input_path" type="PAnsiChar" />
       <parameter name="key" type="PAnsiChar" />
@@ -3410,7 +3410,7 @@
       <retval type="Integer" />
     </parameters>
   </function>
-  <function name="Blake2B_BufferHash" visibility="public" callconv="cdecl">
+  <function name="Blake2B_BufferHash" visibility="public" callconv="cdecl" file="HashObj.pas" line="649">
     <parameters>
       <parameter name="input" type="PAnsiChar" />
       <parameter name="inputSizeBytes" type="Integer" />
@@ -3421,7 +3421,7 @@
       <retval type="Integer" />
     </parameters>
   </function>
-  <function name="update_blake2b" visibility="public" callconv="cdecl">
+  <function name="update_blake2b" visibility="public" callconv="cdecl" file="HashObj.pas" line="651">
     <parameters>
       <parameter name="s" type="Pblake2b_state" />
       <parameter name="input" type="PAnsiChar" />
@@ -3429,14 +3429,14 @@
       <retval type="Integer" />
     </parameters>
   </function>
-  <function name="init_blake2b" visibility="public" callconv="cdecl">
+  <function name="init_blake2b" visibility="public" callconv="cdecl" file="HashObj.pas" line="652">
     <parameters>
       <parameter name="s" type="Pblake2b_state" />
       <parameter name="outputSizeBytes" type="Integer" />
       <retval type="Integer" />
     </parameters>
   </function>
-  <function name="finalHash_blake2b" visibility="public" callconv="cdecl">
+  <function name="finalHash_blake2b" visibility="public" callconv="cdecl" file="HashObj.pas" line="655">
     <parameters>
       <parameter name="s" type="Pblake2b_state" />
       <parameter name="outB" type="PAnsiChar" />
@@ -3444,7 +3444,7 @@
       <retval type="Integer" />
     </parameters>
   </function>
-  <function name="initKey_blake2b" visibility="public" callconv="cdecl">
+  <function name="initKey_blake2b" visibility="public" callconv="cdecl" file="HashObj.pas" line="658">
     <parameters>
       <parameter name="s" type="Pblake2b_state" />
       <parameter name="outputSizeBytes" type="Integer" />
@@ -3453,7 +3453,7 @@
       <retval type="Integer" />
     </parameters>
   </function>
-  <function name="Argon2_KeyDerivation" visibility="public" callconv="cdecl">
+  <function name="Argon2_KeyDerivation" visibility="public" callconv="cdecl" file="HashObj.pas" line="672">
     <parameters>
       <parameter name="counter" type="Integer" />
       <parameter name="memory" type="Integer" />
@@ -3465,32 +3465,32 @@
       <retval type="Integer" />
     </parameters>
   </function>
-  <procedure name="RIPEMD160_BufferHash" visibility="public" callconv="cdecl">
+  <procedure name="RIPEMD160_BufferHash" visibility="public" callconv="cdecl" file="HashObj.pas" line="661">
     <parameters>
       <parameter name="input" type="PAnsiChar" />
       <parameter name="inputSizeBytes" type="Integer" />
       <parameter name="output" type="PAnsiChar" />
     </parameters>
   </procedure>
-  <function name="RIPEMD160_FileHash" visibility="public" callconv="cdecl">
+  <function name="RIPEMD160_FileHash" visibility="public" callconv="cdecl" file="HashObj.pas" line="662">
     <parameters>
       <parameter name="inputPath" type="PAnsiChar" />
       <parameter name="output" type="PAnsiChar" />
       <retval type="Integer" />
     </parameters>
   </function>
-  <procedure name="init_ripemd160" visibility="public" callconv="cdecl">
+  <procedure name="init_ripemd160" visibility="public" callconv="cdecl" file="HashObj.pas" line="664">
     <parameters>
       <parameter name="buf" type="TRIPEMDBuf" paramflags="var" />
     </parameters>
   </procedure>
-  <procedure name="compress_ripemd160" visibility="public" callconv="cdecl">
+  <procedure name="compress_ripemd160" visibility="public" callconv="cdecl" file="HashObj.pas" line="666">
     <parameters>
       <parameter name="buf" type="TRIPEMDBuf" paramflags="var" />
       <parameter name="X" type="TRIPEMDX" />
     </parameters>
   </procedure>
-  <procedure name="finish_ripemd160" visibility="public" callconv="cdecl">
+  <procedure name="finish_ripemd160" visibility="public" callconv="cdecl" file="HashObj.pas" line="669">
     <parameters>
       <parameter name="buf" type="TRIPEMDBuf" paramflags="var" />
       <parameter name="str" type="PAnsiChar" />

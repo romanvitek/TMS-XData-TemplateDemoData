@@ -37,7 +37,8 @@ type
 
 implementation
 
-uses Unit2, Unit3, TZDB;
+uses
+  UMain, UDBSupport, TZDB;
 
 function TDashboardService.AdministratorDashboard: TStream;
 var

@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <namespace name="PersonService" platform="Win64">
-  <interface name="IPersonService" GUID="{B3F998DC-587F-442D-8101-97819329D6C9}" ancestor="IInvokable">
+  <interface name="IPersonService" GUID="{B3F998DC-587F-442D-8101-97819329D6C9}" ancestor="IInvokable" file="PersonService.pas" line="12">
     <attributes>
       <attribute name="TObject" />
     </attributes>
-    <function name="Directory" visibility="public" procflags="abstract virtual">
+    <function name="Directory" visibility="public" procflags="abstract virtual" file="PersonService.pas" line="30">
       <attributes>
         <attribute name="AuthorizeAttribute" />
         <attribute name="TObject" />
@@ -31,7 +31,7 @@
         <retval type="TStream" />
       </parameters>
     </function>
-    <function name="Profile" visibility="public" procflags="abstract virtual">
+    <function name="Profile" visibility="public" procflags="abstract virtual" file="PersonService.pas" line="39">
       <attributes>
         <attribute name="AuthorizeAttribute" />
         <attribute name="TObject" />

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<namespace name="Unit3" platform="Win64">
-  <class name="TDBSupport" file="Unit3.pas" line="35">
+<namespace name="UServerContainer" platform="Win64">
+  <class name="TServerContainer" file="UServerContainer.pas" line="20">
     <ancestor name="TDataModule" namespace="System.Classes">
       <methodref name="ReadHeight" visibility="private">
       </methodref>
@@ -362,46 +362,19 @@
       </ancestor>
     </ancestor>
     <members>
-      <procedure name="ConnectQuery" visibility="public" file="Unit3.pas" line="40">
+      <field name="SparkleHttpSysDispatcher" type="TSparkleHttpSysDispatcher" visibility="published" size="8" offset="176" file="UServerContainer.pas" line="21" />
+      <field name="XDataServer" type="TXDataServer" visibility="published" size="8" offset="184" file="UServerContainer.pas" line="22" />
+      <field name="XDataConnectionPool" type="TXDataConnectionPool" visibility="published" size="8" offset="192" file="UServerContainer.pas" line="23" />
+      <field name="AureliusConnection" type="TAureliusConnection" visibility="published" size="8" offset="200" file="UServerContainer.pas" line="24" />
+      <field name="XDataServerJWT" type="TSparkleJwtMiddleware" visibility="published" size="8" offset="208" file="UServerContainer.pas" line="25" />
+      <field name="XDataServerCompress" type="TSparkleCompressMiddleware" visibility="published" size="8" offset="216" file="UServerContainer.pas" line="26" />
+      <field name="XDataServerCORS" type="TSparkleCorsMiddleware" visibility="published" size="8" offset="224" file="UServerContainer.pas" line="27" />
+      <procedure name="DataModuleCreate" visibility="published" file="UServerContainer.pas" line="28">
         <parameters>
-          <parameter name="conn" type="TFDConnection" paramflags="var" />
-          <parameter name="qry" type="TFDQuery" paramflags="var" />
-          <parameter name="DatabaseName" type="string" />
-          <parameter name="DatabaseEngine" type="string" />
+          <parameter name="Sender" type="TObject" />
         </parameters>
       </procedure>
-      <procedure name="DisconnectQuery" visibility="public" file="Unit3.pas" line="41">
-        <parameters>
-          <parameter name="conn" type="TFDConnection" paramflags="var" />
-          <parameter name="qry" type="TFDQuery" paramflags="var" />
-        </parameters>
-      </procedure>
-      <function name="HashThis" visibility="public" file="Unit3.pas" line="42">
-        <parameters>
-          <parameter name="InputText" type="string" />
-          <retval type="string" />
-        </parameters>
-      </function>
-      <procedure name="Export" visibility="public" file="Unit3.pas" line="43">
-        <parameters>
-          <parameter name="Format" type="string" />
-          <parameter name="QueryResult" type="TFDQuery" />
-          <parameter name="OutputStream" type="TStream" paramflags="var" />
-        </parameters>
-      </procedure>
-      <function name="QueryToJSON" visibility="public" file="Unit3.pas" line="44">
-        <parameters>
-          <parameter name="QueryResult" type="TFDQuery" />
-          <retval type="string" />
-        </parameters>
-      </function>
-      <function name="DecodeSession" visibility="public" file="Unit3.pas" line="45">
-        <parameters>
-          <parameter name="s" type="string" />
-          <retval type="TDateTime" />
-        </parameters>
-      </function>
     </members>
   </class>
-  <variable name="DBSupport" type="TDBSupport" file="Unit3.pas" line="49" />
+  <variable name="ServerContainer" type="TServerContainer" file="UServerContainer.pas" line="32" />
 </namespace>

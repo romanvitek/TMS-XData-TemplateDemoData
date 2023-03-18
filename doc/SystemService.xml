@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <namespace name="SystemService" platform="Win64">
-  <interface name="ISystemService" GUID="{F9CC965F-B6F1-4D38-A50A-E271705E9FCB}" ancestor="IInvokable">
+  <interface name="ISystemService" GUID="{F9CC965F-B6F1-4D38-A50A-E271705E9FCB}" ancestor="IInvokable" file="SystemService.pas" line="11">
     <attributes>
       <attribute name="TObject" />
     </attributes>
-    <function name="Info" visibility="public" procflags="abstract virtual">
+    <function name="Info" visibility="public" procflags="abstract virtual" file="SystemService.pas" line="35">
       <attributes>
         <attribute name="TObject" />
       </attributes>
@@ -36,7 +36,7 @@
         <retval type="TStream" />
       </parameters>
     </function>
-    <function name="Login" visibility="public" procflags="abstract virtual">
+    <function name="Login" visibility="public" procflags="abstract virtual" file="SystemService.pas" line="69">
       <attributes>
         <attribute name="TObject" />
       </attributes>
@@ -82,7 +82,7 @@
         <retval type="TStream" />
       </parameters>
     </function>
-    <function name="Logout" visibility="public" procflags="abstract virtual">
+    <function name="Logout" visibility="public" procflags="abstract virtual" file="SystemService.pas" line="84">
       <attributes>
         <attribute name="TObject" />
       </attributes>
@@ -107,7 +107,7 @@
         <retval type="TStream" />
       </parameters>
     </function>
-    <function name="Renew" visibility="public" procflags="abstract virtual">
+    <function name="Renew" visibility="public" procflags="abstract virtual" file="SystemService.pas" line="99">
       <attributes>
         <attribute name="TObject" />
       </attributes>

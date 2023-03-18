@@ -58,6 +58,8 @@ object MainForm: TMainForm
     OnClick = btSwaggerClick
   end
   object DBConn: TFDConnection
+    Params.Strings = (
+      'DriverID=SQLite')
     FormatOptions.AssignedValues = [fvMaxStringSize]
     Left = 520
     Top = 48

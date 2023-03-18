@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <namespace name="TZDB" platform="Win64">
-  <class name="ETimeZoneInvalid">
+  <class name="ETimeZoneInvalid" file="TZDB.pas" line="94">
     <devnotes>
         <summary>Exception type used to signal the caller code that a requested time zone
         is not present in the bundled database or that its format is invalid.</summary>
@@ -148,7 +148,7 @@
       </ancestor>
     </ancestor>
   </class>
-  <class name="EUnknownTimeZoneYear">
+  <class name="EUnknownTimeZoneYear" file="TZDB.pas" line="98">
     <devnotes>
         <summary>Exception type used to signal the caller code that date/time year details are not
         bundled for the given time zone.</summary>
@@ -296,70 +296,70 @@
       </ancestor>
     </ancestor>
   </class>
-  <type name="TPreciseTime" type="Int64">
+  <type name="TPreciseTime" type="Int64" file="TZDB.pas" line="102">
     <devnotes>
         Special type used to manipulate TDateTime in millisecond precision.
         This is an internal type.
     </devnotes>
   </type>
-  <struct name="TYearSegment" size="48">
+  <struct name="TYearSegment" size="48" file="TZDB.pas" line="106">
     <devnotes>
        <summary>Represents a specific date/time segment of the year.</summary>
        <remarks>A calendar year in most time zones is divided into standard/ambiguous/daylight/invalid/standard segments.</remarks>
     </devnotes>
-    <field name="FStartsAt" type="TPreciseTime" visibility="private" size="8" offset="0" />
-    <field name="FEndsAt" type="TPreciseTime" visibility="private" size="8" offset="8" />
-    <field name="FType" type="TLocalTimeType" visibility="private" size="1" offset="16" />
-    <field name="FName" type="string" visibility="private" size="8" offset="24" />
-    <field name="FPeriodOffset" type="Int64" visibility="private" size="8" offset="32" />
-    <field name="FBias" type="Int64" visibility="private" size="8" offset="40" />
-    <function name="GetUtcOffset" visibility="private" procflags="inline">
+    <field name="FStartsAt" type="TPreciseTime" visibility="private" size="8" offset="0" file="TZDB.pas" line="108" />
+    <field name="FEndsAt" type="TPreciseTime" visibility="private" size="8" offset="8" file="TZDB.pas" line="108" />
+    <field name="FType" type="TLocalTimeType" visibility="private" size="1" offset="16" file="TZDB.pas" line="109" />
+    <field name="FName" type="string" visibility="private" size="8" offset="24" file="TZDB.pas" line="110" />
+    <field name="FPeriodOffset" type="Int64" visibility="private" size="8" offset="32" file="TZDB.pas" line="111" />
+    <field name="FBias" type="Int64" visibility="private" size="8" offset="40" file="TZDB.pas" line="111" />
+    <function name="GetUtcOffset" visibility="private" procflags="inline" file="TZDB.pas" line="113">
       <parameters>
         <retval type="TTimeSpan" />
       </parameters>
     </function>
-    <function name="GetStartsAt" visibility="private">
+    <function name="GetStartsAt" visibility="private" file="TZDB.pas" line="114">
       <parameters>
         <retval type="TDateTime" />
       </parameters>
     </function>
-    <function name="GetEndsAt" visibility="private">
+    <function name="GetEndsAt" visibility="private" file="TZDB.pas" line="115">
       <parameters>
         <retval type="TDateTime" />
       </parameters>
     </function>
-    <function name="UtcTimeInSegment" visibility="private">
+    <function name="UtcTimeInSegment" visibility="private" file="TZDB.pas" line="117">
       <parameters>
         <parameter name="AUtcTime" type="TPreciseTime" paramflags="const" />
         <parameter name="ANoBias" type="Boolean" paramflags="out" />
         <retval type="Boolean" />
       </parameters>
     </function>
-    <property name="StartsAt" visibility="public" read="GetStartsAt" type="TDateTime" default="0">
+    <property name="StartsAt" visibility="public" read="GetStartsAt" type="TDateTime" default="0" file="TZDB.pas" line="121">
       <devnotes>
          <summary>The date/time when the segment starts.</summary>
          <returns>A date/time value representing the start of the segment.</returns>
       </devnotes>
     </property>
-    <property name="EndsAt" visibility="public" read="GetEndsAt" type="TDateTime" default="0">
+    <property name="EndsAt" visibility="public" read="GetEndsAt" type="TDateTime" default="0" file="TZDB.pas" line="125">
       <devnotes>
          <summary>The date/time when the segment ends.</summary>
          <returns>A date/time value representing the end of the segment.</returns>
       </devnotes>
     </property>
-    <property name="LocalType" visibility="public" read="FType" type="TLocalTimeType">
+    <property name="LocalType" visibility="public" read="FType" type="TLocalTimeType" file="TZDB.pas" line="129">
       <devnotes>
          <summary>The type of the segment.</summary>
          <returns>An enum value representing the type of the segment.</returns>
       </devnotes>
     </property>
-    <property name="DisplayName" visibility="public" read="FName" type="string" default="0">
+    <property name="DisplayName" visibility="public" read="FName" type="string" default="0" file="TZDB.pas" line="133">
       <devnotes>
          <summary>The time zone display name used to describe the segment.</summary>
          <returns>The string value of the display name.</returns>
       </devnotes>
     </property>
-    <property name="UtcOffset" visibility="public" read="GetUtcOffset" type="TTimeSpan">
+    <property name="UtcOffset" visibility="public" read="GetUtcOffset" type="TTimeSpan" file="TZDB.pas" line="137">
       <devnotes>
          <summary>The time zone UTC offset.</summary>
          <returns>The UTC offset including the DST bias.</returns>
@@ -369,7 +369,7 @@
   <array name="TYearSegmentArray">
     <element type="TYearSegment" />
   </array>
-  <class name="TBundledTimeZone">
+  <class name="TBundledTimeZone" file="TZDB.pas" line="153">
     <devnotes>
         <summary>A timezone class implementation that retreives its data from the bundled database.</summary>
         <remarks>This class inherits the standard <c>TTimeZone</c> class in Delphi XE.</remarks>
@@ -457,9 +457,9 @@
       </propertyref>
     </ancestor>
     <members>
-      <field name="FZone" type="Pointer" visibility="private" size="8" offset="8" />
-      <field name="FSegmentsByYear" type="TDictionary&lt;System.Word,TZDB.TYearSegmentArray&gt;" visibility="private" size="8" offset="16" />
-      <function name="GetSpillOverYearBreakdown" visibility="private">
+      <field name="FZone" type="Pointer" visibility="private" size="8" offset="8" file="TZDB.pas" line="155" />
+      <field name="FSegmentsByYear" type="TDictionary&lt;System.Word,TZDB.TYearSegmentArray&gt;" visibility="private" size="8" offset="16" file="TZDB.pas" line="160" />
+      <function name="GetSpillOverYearBreakdown" visibility="private" file="TZDB.pas" line="162">
         <parameters>
           <parameter name="AYear" type="Word" paramflags="const" />
           <retval type="TYearSegmentArray">
@@ -469,7 +469,7 @@
           </retval>
         </parameters>
       </function>
-      <function name="GetSegment" visibility="private">
+      <function name="GetSegment" visibility="private" file="TZDB.pas" line="163">
         <parameters>
           <parameter name="AYear" type="Word" paramflags="const" />
           <parameter name="APreciseTime" type="TPreciseTime" paramflags="const" />
@@ -483,7 +483,7 @@
           </retval>
         </parameters>
       </function>
-      <function name="GetSegmentUtc" visibility="private">
+      <function name="GetSegmentUtc" visibility="private" file="TZDB.pas" line="165">
         <parameters>
           <parameter name="AYear" type="Word" paramflags="const" />
           <parameter name="APreciseTime" type="TPreciseTime" paramflags="const" />
@@ -495,7 +495,7 @@
           </retval>
         </parameters>
       </function>
-      <function name="TryFindSegment" visibility="private">
+      <function name="TryFindSegment" visibility="private" file="TZDB.pas" line="166">
         <parameters>
           <parameter name="AYear" type="Word" paramflags="const" />
           <parameter name="AType" type="TLocalTimeType" paramflags="const" />
@@ -504,22 +504,22 @@
           <retval type="Boolean" />
         </parameters>
       </function>
-      <function name="GetCurrentAbbreviation" visibility="private">
+      <function name="GetCurrentAbbreviation" visibility="private" file="TZDB.pas" line="168">
         <parameters>
           <retval type="string" />
         </parameters>
       </function>
-      <function name="GetCurrentDisplayName" visibility="private">
+      <function name="GetCurrentDisplayName" visibility="private" file="TZDB.pas" line="169">
         <parameters>
           <retval type="string" />
         </parameters>
       </function>
-      <function name="GetCurrentUtcOffset" visibility="private">
+      <function name="GetCurrentUtcOffset" visibility="private" file="TZDB.pas" line="170">
         <parameters>
           <retval type="TTimeSpan" />
         </parameters>
       </function>
-      <function name="DoGetID" visibility="protected">
+      <function name="DoGetID" visibility="protected" file="TZDB.pas" line="175">
         <devnotes>
             <summary>Returns the ID of the timezone. An ID is a string that should uniquely identify the timezone.</summary>
             <returns>The ID of the timezone.</returns>
@@ -528,7 +528,7 @@
           <retval type="string" />
         </parameters>
       </function>
-      <constructor name="Create" visibility="public">
+      <constructor name="Create" visibility="public" file="TZDB.pas" line="180">
         <devnotes>
             <summary>Creates a new instance of this timezone class.</summary>
             <param name="ATimeZoneID">The ID of the timezone to use (ex. &quot;Europe/Bucharest&quot;).</param>
@@ -538,14 +538,14 @@
           <parameter name="ATimeZoneID" type="string" paramflags="const" />
         </parameters>
       </constructor>
-      <destructor name="Destroy" visibility="public">
+      <destructor name="Destroy" visibility="public" file="TZDB.pas" line="183">
         <devnotes>
             <summary>Destroys the current instance.</summary>
         </devnotes>
         <parameters>
         </parameters>
       </destructor>
-      <function name="KnownTimeZones" visibility="public" procflags="class">
+      <function name="KnownTimeZones" visibility="public" procflags="class" file="TZDB.pas" line="188">
         <devnotes>
             <summary>Returns a list of known time zones.</summary>
             <param name="AIncludeAliases">Pass <c>True</c> to include time zone aliases into the list.</param>
@@ -560,7 +560,7 @@
           <retval type="TStringDynArray" />
         </parameters>
       </function>
-      <function name="KnownAliases" visibility="public" procflags="class">
+      <function name="KnownAliases" visibility="public" procflags="class" file="TZDB.pas" line="193">
         <devnotes>
             <summary>Returns a list of known time zone aliases.</summary>
             <returns>An array of strings representing the aliases of the known time zones.</returns>
@@ -569,7 +569,7 @@
           <retval type="TStringDynArray" />
         </parameters>
       </function>
-      <function name="GetTimeZoneFromAlias" visibility="public" procflags="class inline">
+      <function name="GetTimeZoneFromAlias" visibility="public" procflags="class inline" file="TZDB.pas" line="199">
         <devnotes>
             <summary>Returns the time zone name for a given alias.</summary>
             <param name="AAliasID">The alias to lookup.</param>
@@ -581,7 +581,7 @@
           <retval type="string" />
         </parameters>
       </function>
-      <function name="GetTimeZone" visibility="public" procflags="class">
+      <function name="GetTimeZone" visibility="public" procflags="class" file="TZDB.pas" line="204">
         <devnotes>
             <summary>Returns an instance of this time zone class.</summary>
             <param name="ATimeZoneID">The ID of the timezone to use (ex. &quot;Europe/Bucharest&quot;).</param>
@@ -597,7 +597,7 @@
           </retval>
         </parameters>
       </function>
-      <function name="Version" visibility="public" procflags="class">
+      <function name="Version" visibility="public" procflags="class" file="TZDB.pas" line="208">
         <devnotes>
             <summary>Returns the version of the TZDB component.</summary>
             <returns>A string representing the version of the source.</returns>
@@ -606,7 +606,7 @@
           <retval type="string" />
         </parameters>
       </function>
-      <function name="DbVersion" visibility="public" procflags="class">
+      <function name="DbVersion" visibility="public" procflags="class" file="TZDB.pas" line="212">
         <devnotes>
             <summary>Returns the version of compiled TZDB database.</summary>
             <returns>A string representing the compiled version.</returns>
@@ -615,7 +615,7 @@
           <retval type="string" />
         </parameters>
       </function>
-      <function name="GetYearBreakdown" visibility="public">
+      <function name="GetYearBreakdown" visibility="public" file="TZDB.pas" line="217">
         <devnotes>
             <summary>Breaks a given year into components segments.</summary>
             <param name="AYear">The year to get data for.</param>
@@ -630,7 +630,7 @@
           </retval>
         </parameters>
       </function>
-      <function name="DaylightTimeStart" visibility="public" procflags="inline">
+      <function name="DaylightTimeStart" visibility="public" procflags="inline" file="TZDB.pas" line="224">
         <devnotes>
             <summary>Get the starting date/time of daylight period.</summary>
             <remarks>This function considers the first period of this type and will not work properly for complicated time zones.</remarks>
@@ -643,7 +643,7 @@
           <retval type="TDateTime" />
         </parameters>
       </function>
-      <function name="StandardTimeStart" visibility="public" procflags="inline">
+      <function name="StandardTimeStart" visibility="public" procflags="inline" file="TZDB.pas" line="231">
         <devnotes>
             <summary>Get the starting date/time of standard period.</summary>
             <remarks>This function considers the first period of this type and will not work properly for complicated time zones.</remarks>
@@ -656,7 +656,7 @@
           <retval type="TDateTime" />
         </parameters>
       </function>
-      <function name="InvalidTimeStart" visibility="public" procflags="inline">
+      <function name="InvalidTimeStart" visibility="public" procflags="inline" file="TZDB.pas" line="238">
         <devnotes>
             <summary>Get the starting date/time of invalid period.</summary>
             <remarks>This function considers the first period of this type and will not work properly for complicated time zones.</remarks>
@@ -669,7 +669,7 @@
           <retval type="TDateTime" />
         </parameters>
       </function>
-      <function name="AmbiguousTimeStart" visibility="public" procflags="inline">
+      <function name="AmbiguousTimeStart" visibility="public" procflags="inline" file="TZDB.pas" line="245">
         <devnotes>
             <summary>Get the starting date/time of ambiguous period.</summary>
             <remarks>This function considers the first period of this type and will not work properly for complicated time zones.</remarks>
@@ -682,7 +682,7 @@
           <retval type="TDateTime" />
         </parameters>
       </function>
-      <function name="DaylightTimeEnd" visibility="public" procflags="inline">
+      <function name="DaylightTimeEnd" visibility="public" procflags="inline" file="TZDB.pas" line="252">
         <devnotes>
             <summary>Get the ending date/time of daylight saving period.</summary>
             <remarks>This function considers the first period of this type and will not work properly for complicated time zones.</remarks>
@@ -695,7 +695,7 @@
           <retval type="TDateTime" />
         </parameters>
       </function>
-      <function name="StandardTimeEnd" visibility="public" procflags="inline">
+      <function name="StandardTimeEnd" visibility="public" procflags="inline" file="TZDB.pas" line="259">
         <devnotes>
             <summary>Get the ending date/time of standard period.</summary>
             <remarks>This function considers the first period of this type and will not work properly for complicated time zones.</remarks>
@@ -708,7 +708,7 @@
           <retval type="TDateTime" />
         </parameters>
       </function>
-      <function name="InvalidTimeEnd" visibility="public" procflags="inline">
+      <function name="InvalidTimeEnd" visibility="public" procflags="inline" file="TZDB.pas" line="266">
         <devnotes>
             <summary>Get the ending date/time of invalid period.</summary>
             <remarks>This function considers the first period of this type and will not work properly for complicated time zones.</remarks>
@@ -721,7 +721,7 @@
           <retval type="TDateTime" />
         </parameters>
       </function>
-      <function name="AmbiguousTimeEnd" visibility="public" procflags="inline">
+      <function name="AmbiguousTimeEnd" visibility="public" procflags="inline" file="TZDB.pas" line="273">
         <devnotes>
             <summary>Get the ending date/time of ambiguous period.</summary>
             <remarks>This function considers the first period of this type and will not work properly for complicated time zones.</remarks>
@@ -734,7 +734,7 @@
           <retval type="TDateTime" />
         </parameters>
       </function>
-      <function name="HasDaylightTime" visibility="public" procflags="inline">
+      <function name="HasDaylightTime" visibility="public" procflags="inline" file="TZDB.pas" line="279">
         <devnotes>
             <summary>Determines if the timezone has daylight saving period.</summary>
             <param name="AYear">The year to check.</param>
@@ -746,7 +746,7 @@
           <retval type="Boolean" />
         </parameters>
       </function>
-      <function name="ToISO8601Format" visibility="public">
+      <function name="ToISO8601Format" visibility="public" file="TZDB.pas" line="285">
         <devnotes>
             <summary>Converts an UTC date/time to ISO8601 date time string.</summary>
             <param name="ADateTime">The UTC date/time to convert.</param>
@@ -758,7 +758,7 @@
           <retval type="string" />
         </parameters>
       </function>
-      <function name="GetAbbreviation" visibility="public">
+      <function name="GetAbbreviation" visibility="public" file="TZDB.pas" line="293">
         <devnotes>
             <summary>Generates an abbreviation string for the given local time.</summary>
             <param name="ADateTime">The local time.</param>
@@ -777,7 +777,7 @@
           <retval type="string" />
         </parameters>
       </function>
-      <function name="GetDisplayName" visibility="public">
+      <function name="GetDisplayName" visibility="public" file="TZDB.pas" line="301">
         <devnotes>
             <summary>Generates a diplay string for the given local time.</summary>
             <param name="ADateTime">The local time.</param>
@@ -796,7 +796,7 @@
           <retval type="string" />
         </parameters>
       </function>
-      <function name="GetLocalTimeType" visibility="public">
+      <function name="GetLocalTimeType" visibility="public" file="TZDB.pas" line="307">
         <devnotes>
             <summary>Returns the type of the local time.</summary>
             <param name="ADateTime">The local time.</param>
@@ -808,7 +808,7 @@
           <retval type="TLocalTimeType" />
         </parameters>
       </function>
-      <function name="IsAmbiguousTime" visibility="public">
+      <function name="IsAmbiguousTime" visibility="public" file="TZDB.pas" line="313">
         <devnotes>
             <summary>Checks whether the specified local time is ambiguous.</summary>
             <param name="ADateTime">The local time.</param>
@@ -820,7 +820,7 @@
           <retval type="Boolean" />
         </parameters>
       </function>
-      <function name="IsDaylightTime" visibility="public">
+      <function name="IsDaylightTime" visibility="public" file="TZDB.pas" line="320">
         <devnotes>
             <summary>Checks whether the specified local time is daylight.</summary>
             <param name="ADateTime">The local time.</param>
@@ -838,7 +838,7 @@
           <retval type="Boolean" />
         </parameters>
       </function>
-      <function name="IsInvalidTime" visibility="public" procflags="inline">
+      <function name="IsInvalidTime" visibility="public" procflags="inline" file="TZDB.pas" line="326">
         <devnotes>
             <summary>Checks whether the specified local time is invalid.</summary>
             <param name="ADateTime">The local time.</param>
@@ -850,7 +850,7 @@
           <retval type="Boolean" />
         </parameters>
       </function>
-      <function name="IsStandardTime" visibility="public">
+      <function name="IsStandardTime" visibility="public" file="TZDB.pas" line="333">
         <devnotes>
             <summary>Checks whether the specified local time is standard.</summary>
             <param name="ADateTime">The local time.</param>
@@ -868,7 +868,7 @@
           <retval type="Boolean" />
         </parameters>
       </function>
-      <function name="GetUtcOffset" visibility="public">
+      <function name="GetUtcOffset" visibility="public" file="TZDB.pas" line="341">
         <devnotes>
             <summary>Returns the UTC offset of the given local time.</summary>
             <param name="ADateTime">The local time.</param>
@@ -887,7 +887,7 @@
           <retval type="TTimeSpan" />
         </parameters>
       </function>
-      <function name="ToLocalTime" visibility="public">
+      <function name="ToLocalTime" visibility="public" file="TZDB.pas" line="348">
         <devnotes>
             <summary>Converts an UTC time to a local time.</summary>
             <param name="ADateTime">The UTC time.</param>
@@ -899,7 +899,7 @@
           <retval type="TDateTime" />
         </parameters>
       </function>
-      <function name="ToUniversalTime" visibility="public">
+      <function name="ToUniversalTime" visibility="public" file="TZDB.pas" line="356">
         <devnotes>
             <summary>Converts a local time to an UTC time.</summary>
             <param name="ADateTime">The local time.</param>
@@ -918,25 +918,25 @@
           <retval type="TDateTime" />
         </parameters>
       </function>
-      <property name="ID" visibility="public" read="DoGetID" type="string" default="0">
+      <property name="ID" visibility="public" read="DoGetID" type="string" default="0" file="TZDB.pas" line="361">
         <devnotes>
             <summary>Returns the ID of the timezone. An ID is a string that should uniquely identify the timezone.</summary>
             <returns>The ID of the timezone.</returns>
         </devnotes>
       </property>
-      <property name="DisplayName" visibility="public" read="GetCurrentDisplayName" type="string" default="0">
+      <property name="DisplayName" visibility="public" read="GetCurrentDisplayName" type="string" default="0" file="TZDB.pas" line="365">
         <devnotes>
             <summary>Returns the current time zone's display name string.</summary>
             <returns>A string containing the display name.</returns>
         </devnotes>
       </property>
-      <property name="Abbreviation" visibility="public" read="GetCurrentAbbreviation" type="string" default="0">
+      <property name="Abbreviation" visibility="public" read="GetCurrentAbbreviation" type="string" default="0" file="TZDB.pas" line="369">
         <devnotes>
             <summary>Returns the current time zone's abbreviation string.</summary>
             <returns>A string containing the abbreviation.</returns>
         </devnotes>
       </property>
-      <property name="UtcOffset" visibility="public" read="GetCurrentUtcOffset" type="TTimeSpan">
+      <property name="UtcOffset" visibility="public" read="GetCurrentUtcOffset" type="TTimeSpan" file="TZDB.pas" line="373">
         <devnotes>
             <summary>Returns the current time zone's UTC offset.</summary>
             <returns>The current UTC offset.</returns>

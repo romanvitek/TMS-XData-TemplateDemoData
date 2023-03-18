@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<namespace name="Unit2" platform="Win64">
-  <class name="TMainForm" file="Unit2.pas" line="18">
+<namespace name="UMain" platform="Win64">
+  <class name="TMainForm" file="UMain.pas" line="20">
     <ancestor name="TForm" namespace="Vcl.Forms">
       <methodref name="Create@" visibility="class private" procflags="class constructor noself">
       </methodref>
@@ -2488,120 +2488,120 @@
       </ancestor>
     </ancestor>
     <members>
-      <field name="mmInfo" type="TMemo" visibility="published" size="8" offset="1736" file="Unit2.pas" line="19" />
-      <field name="btStart" type="TButton" visibility="published" size="8" offset="1744" file="Unit2.pas" line="20" />
-      <field name="btStop" type="TButton" visibility="published" size="8" offset="1752" file="Unit2.pas" line="21" />
-      <field name="btSwagger" type="TButton" visibility="published" size="8" offset="1760" file="Unit2.pas" line="22" />
-      <field name="DBConn" type="TFDConnection" visibility="published" size="8" offset="1768" file="Unit2.pas" line="23" />
-      <field name="FDPhysSQLiteDriverLink1" type="TFDPhysSQLiteDriverLink" visibility="published" size="8" offset="1776" file="Unit2.pas" line="24" />
-      <field name="Query1" type="TFDQuery" visibility="published" size="8" offset="1784" file="Unit2.pas" line="25" />
-      <field name="tmrStart" type="TTimer" visibility="published" size="8" offset="1792" file="Unit2.pas" line="26" />
-      <procedure name="btStartClick" visibility="published" file="Unit2.pas" line="27">
+      <field name="mmInfo" type="TMemo" visibility="published" size="8" offset="1736" file="UMain.pas" line="21" />
+      <field name="btStart" type="TButton" visibility="published" size="8" offset="1744" file="UMain.pas" line="22" />
+      <field name="btStop" type="TButton" visibility="published" size="8" offset="1752" file="UMain.pas" line="23" />
+      <field name="btSwagger" type="TButton" visibility="published" size="8" offset="1760" file="UMain.pas" line="24" />
+      <field name="DBConn" type="TFDConnection" visibility="published" size="8" offset="1768" file="UMain.pas" line="25" />
+      <field name="FDPhysSQLiteDriverLink1" type="TFDPhysSQLiteDriverLink" visibility="published" size="8" offset="1776" file="UMain.pas" line="26" />
+      <field name="Query1" type="TFDQuery" visibility="published" size="8" offset="1784" file="UMain.pas" line="27" />
+      <field name="tmrStart" type="TTimer" visibility="published" size="8" offset="1792" file="UMain.pas" line="28" />
+      <procedure name="btStartClick" visibility="published" file="UMain.pas" line="29">
         <parameters>
           <parameter name="ASender" type="TObject" />
         </parameters>
       </procedure>
-      <procedure name="btStopClick" visibility="published" file="Unit2.pas" line="28">
+      <procedure name="btStopClick" visibility="published" file="UMain.pas" line="30">
         <parameters>
           <parameter name="ASender" type="TObject" />
         </parameters>
       </procedure>
-      <procedure name="FormCreate" visibility="published" file="Unit2.pas" line="29">
+      <procedure name="FormCreate" visibility="published" file="UMain.pas" line="31">
         <parameters>
           <parameter name="ASender" type="TObject" />
         </parameters>
       </procedure>
-      <function name="GetAppName" visibility="published" file="Unit2.pas" line="30">
+      <function name="GetAppName" visibility="published" file="UMain.pas" line="32">
         <parameters>
           <retval type="string" />
         </parameters>
       </function>
-      <function name="GetAppRelease" visibility="published" file="Unit2.pas" line="31">
+      <function name="GetAppRelease" visibility="published" file="UMain.pas" line="33">
         <parameters>
           <retval type="TDateTime" />
         </parameters>
       </function>
-      <function name="GetAppReleaseUTC" visibility="published" file="Unit2.pas" line="32">
+      <function name="GetAppReleaseUTC" visibility="published" file="UMain.pas" line="34">
         <parameters>
           <retval type="TDateTime" />
         </parameters>
       </function>
-      <function name="GetAppVersion" visibility="published" file="Unit2.pas" line="33">
+      <function name="GetAppVersion" visibility="published" file="UMain.pas" line="35">
         <parameters>
           <retval type="string" />
         </parameters>
       </function>
-      <procedure name="GetAppParameters" visibility="published" file="Unit2.pas" line="34">
+      <procedure name="GetAppParameters" visibility="published" file="UMain.pas" line="36">
         <parameters>
           <parameter name="List" type="TStringList" />
         </parameters>
       </procedure>
-      <function name="GetAppFileName" visibility="published" file="Unit2.pas" line="35">
+      <function name="GetAppFileName" visibility="published" file="UMain.pas" line="37">
         <parameters>
           <retval type="string" />
         </parameters>
       </function>
-      <function name="GetAppFileSize" visibility="published" file="Unit2.pas" line="36">
+      <function name="GetAppFileSize" visibility="published" file="UMain.pas" line="38">
         <parameters>
           <retval type="Int64" />
         </parameters>
       </function>
-      <function name="GetAppTimeZone" visibility="published" file="Unit2.pas" line="37">
+      <function name="GetAppTimeZone" visibility="published" file="UMain.pas" line="39">
         <parameters>
           <retval type="string" />
         </parameters>
       </function>
-      <function name="GetAppTimeZoneOffset" visibility="published" file="Unit2.pas" line="38">
+      <function name="GetAppTimeZoneOffset" visibility="published" file="UMain.pas" line="40">
         <parameters>
           <retval type="Integer" />
         </parameters>
       </function>
-      <procedure name="GetIPAddresses" visibility="published" file="Unit2.pas" line="39">
+      <procedure name="GetIPAddresses" visibility="published" file="UMain.pas" line="41">
         <parameters>
           <parameter name="List" type="TStringList" />
         </parameters>
       </procedure>
-      <function name="GetMemoryUsage" visibility="published" file="Unit2.pas" line="40">
+      <function name="GetMemoryUsage" visibility="published" file="UMain.pas" line="42">
         <parameters>
           <retval type="NativeUInt" />
         </parameters>
       </function>
-      <procedure name="btSwaggerClick" visibility="published" file="Unit2.pas" line="41">
+      <procedure name="btSwaggerClick" visibility="published" file="UMain.pas" line="43">
         <parameters>
           <parameter name="Sender" type="TObject" />
         </parameters>
       </procedure>
-      <procedure name="tmrStartTimer" visibility="published" file="Unit2.pas" line="42">
+      <procedure name="tmrStartTimer" visibility="published" file="UMain.pas" line="44">
         <parameters>
           <parameter name="Sender" type="TObject" />
         </parameters>
       </procedure>
-      <procedure name="FormShow" visibility="published" file="Unit2.pas" line="43">
+      <procedure name="FormShow" visibility="published" file="UMain.pas" line="45">
         <parameters>
           <parameter name="Sender" type="TObject" />
         </parameters>
       </procedure>
-      <field name="AppName" type="string" visibility="public" size="8" offset="1800" file="Unit2.pas" line="45" />
-      <field name="AppVersion" type="string" visibility="public" size="8" offset="1808" file="Unit2.pas" line="46" />
-      <field name="AppRelease" type="TDateTime" visibility="public" size="8" offset="1816" file="Unit2.pas" line="47" />
-      <field name="AppReleaseUTC" type="TDateTime" visibility="public" size="8" offset="1824" file="Unit2.pas" line="48" />
-      <field name="AppParameters" type="TStringList" visibility="public" size="8" offset="1832" file="Unit2.pas" line="49" />
-      <field name="AppFileSize" type="Int64" visibility="public" size="8" offset="1840" file="Unit2.pas" line="50" />
-      <field name="AppFileName" type="string" visibility="public" size="8" offset="1848" file="Unit2.pas" line="51" />
-      <field name="AppTimeZone" type="string" visibility="public" size="8" offset="1856" file="Unit2.pas" line="52" />
-      <field name="AppTimeZoneOffset" type="Integer" visibility="public" size="4" offset="1864" file="Unit2.pas" line="53" />
-      <field name="IPAddresses" type="TStringList" visibility="public" size="8" offset="1872" file="Unit2.pas" line="54" />
-      <field name="AppConfigFile" type="string" visibility="public" size="8" offset="1880" file="Unit2.pas" line="55" />
-      <field name="AppConfiguration" type="TJSONObject" visibility="public" size="8" offset="1888" file="Unit2.pas" line="56" />
-      <field name="DatabaseName" type="string" visibility="public" size="8" offset="1896" file="Unit2.pas" line="58" />
-      <field name="DatabaseAlias" type="string" visibility="public" size="8" offset="1904" file="Unit2.pas" line="59" />
-      <field name="DatabaseEngine" type="string" visibility="public" size="8" offset="1912" file="Unit2.pas" line="60" />
-      <field name="DatabaseUsername" type="string" visibility="public" size="8" offset="1920" file="Unit2.pas" line="61" />
-      <field name="DatabasePassword" type="string" visibility="public" size="8" offset="1928" file="Unit2.pas" line="62" />
-      <field name="DatabaseConfig" type="string" visibility="public" size="8" offset="1936" file="Unit2.pas" line="63" />
-      <procedure name="UpdateGUI" visibility="class private" file="Unit2.pas" line="66">
+      <field name="AppName" type="string" visibility="public" size="8" offset="1800" file="UMain.pas" line="47" />
+      <field name="AppVersion" type="string" visibility="public" size="8" offset="1808" file="UMain.pas" line="48" />
+      <field name="AppRelease" type="TDateTime" visibility="public" size="8" offset="1816" file="UMain.pas" line="49" />
+      <field name="AppReleaseUTC" type="TDateTime" visibility="public" size="8" offset="1824" file="UMain.pas" line="50" />
+      <field name="AppParameters" type="TStringList" visibility="public" size="8" offset="1832" file="UMain.pas" line="51" />
+      <field name="AppFileSize" type="Int64" visibility="public" size="8" offset="1840" file="UMain.pas" line="52" />
+      <field name="AppFileName" type="string" visibility="public" size="8" offset="1848" file="UMain.pas" line="53" />
+      <field name="AppTimeZone" type="string" visibility="public" size="8" offset="1856" file="UMain.pas" line="54" />
+      <field name="AppTimeZoneOffset" type="Integer" visibility="public" size="4" offset="1864" file="UMain.pas" line="55" />
+      <field name="IPAddresses" type="TStringList" visibility="public" size="8" offset="1872" file="UMain.pas" line="56" />
+      <field name="AppConfigFile" type="string" visibility="public" size="8" offset="1880" file="UMain.pas" line="57" />
+      <field name="AppConfiguration" type="TJSONObject" visibility="public" size="8" offset="1888" file="UMain.pas" line="58" />
+      <field name="DatabaseName" type="string" visibility="public" size="8" offset="1896" file="UMain.pas" line="60" />
+      <field name="DatabaseAlias" type="string" visibility="public" size="8" offset="1904" file="UMain.pas" line="61" />
+      <field name="DatabaseEngine" type="string" visibility="public" size="8" offset="1912" file="UMain.pas" line="62" />
+      <field name="DatabaseUsername" type="string" visibility="public" size="8" offset="1920" file="UMain.pas" line="63" />
+      <field name="DatabasePassword" type="string" visibility="public" size="8" offset="1928" file="UMain.pas" line="64" />
+      <field name="DatabaseConfig" type="string" visibility="public" size="8" offset="1936" file="UMain.pas" line="65" />
+      <procedure name="UpdateGUI" visibility="class private" file="UMain.pas" line="68">
       </procedure>
     </members>
   </class>
-  <variable name="MainForm" type="TMainForm" file="Unit2.pas" line="70" />
+  <variable name="MainForm" type="TMainForm" file="UMain.pas" line="72" />
 </namespace>

@@ -51,6 +51,7 @@ begin
       SQL.Clear;
 
       // Random photos generated via https://boredhumans.com/faces.php
+      {
       SQL.Clear;
       ImageFile.Text := '';
       SQL.Add('insert into '+TableName+' values(0, 1, Datetime("now"), 0, 1, :PHOTO );');
@@ -71,6 +72,7 @@ begin
       ImageFile.LoadFromFile('ddl/photo/data/3.txt');
       ParamByName('PHOTO').AsString := ImageFile.Text;
       ExecSQL;
+      }
 
 //      SQL.Add('insert into person values(0010030003, 1, Datetime("now"), 0, 1, "Emma",      "C", "Williams",    "'+FormatDateTime('yyyy-mm-dd',Now-(20*365)-Random(50 * 365))+'", "EWILLIAMS",   "NO PASSWORD SET" );');
 //      SQL.Add('insert into person values(0010040004, 1, Datetime("now"), 0, 1, "Noah",      "D", "Brown",       "'+FormatDateTime('yyyy-mm-dd',Now-(20*365)-Random(50 * 365))+'", "NBROWN",      "NO PASSWORD SET" );');
