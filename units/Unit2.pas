@@ -12,7 +12,7 @@ uses
   FireDAC.Stan.ExprFuncs, FireDAC.Phys.SQLiteDef, FireDAC.Stan.Param,
   FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt, Data.DB,
   FireDAC.Comp.DataSet, FireDAC.Comp.Client, FireDAC.Phys.SQLite,
-  Vcl.ExtCtrls, System.JSON;
+  Vcl.ExtCtrls, System.JSON, FireDAC.Phys.SQLiteWrapper.Stat;
 
 type
   TMainForm = class(TForm)

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<namespace name="DashboardService" platform="Win64">
+  <interface name="IDashboardService" GUID="{925353F2-1ADD-4239-90F3-37BC41F48332}" ancestor="IInvokable">
+    <attributes>
+      <attribute name="TObject" />
+    </attributes>
+    <function name="AdministratorDashboard" visibility="public" procflags="abstract virtual">
+      <attributes>
+        <attribute name="TObject" />
+        <attribute name="AuthorizeAttribute" />
+      </attributes>
+      <devnotes>
+          <summary>
+            Return JSON for setting up an Administrator dashboard.
+          </summary>
+          <remarks>
+            JWT is used to determine Administrator identity.
+          </remarks>
+      </devnotes>
+      <parameters>
+        <retval type="TStream" />
+      </parameters>
+    </function>
+  </interface>
+</namespace>

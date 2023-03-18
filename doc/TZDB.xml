@@ -1,0 +1,947 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<namespace name="TZDB" platform="Win64">
+  <class name="ETimeZoneInvalid">
+    <devnotes>
+        <summary>Exception type used to signal the caller code that a requested time zone
+        is not present in the bundled database or that its format is invalid.</summary>
+    </devnotes>
+    <ancestor name="Exception" namespace="System.SysUtils">
+      <methodref name="Create@" visibility="class private" procflags="class constructor noself">
+      </methodref>
+      <methodref name="Destroy@" visibility="class private" procflags="class destructor noself">
+      </methodref>
+      <methodref name="SetInnerException" visibility="protected">
+      </methodref>
+      <methodref name="SetStackInfo" visibility="protected">
+      </methodref>
+      <methodref name="GetStackTrace" visibility="protected">
+      </methodref>
+      <methodref name="RaisingException" visibility="protected" procflags="virtual">
+      </methodref>
+      <methodref name="Create" visibility="public" procflags="constructor">
+      </methodref>
+      <methodref name="CreateFmt" visibility="public" procflags="constructor">
+      </methodref>
+      <methodref name="CreateRes" visibility="public" procflags="constructor overload">
+      </methodref>
+      <methodref name="CreateRes" visibility="public" procflags="constructor overload">
+      </methodref>
+      <methodref name="CreateResFmt" visibility="public" procflags="constructor overload">
+      </methodref>
+      <methodref name="CreateResFmt" visibility="public" procflags="constructor overload">
+      </methodref>
+      <methodref name="CreateHelp" visibility="public" procflags="constructor">
+      </methodref>
+      <methodref name="CreateFmtHelp" visibility="public" procflags="constructor">
+      </methodref>
+      <methodref name="CreateResHelp" visibility="public" procflags="constructor overload">
+      </methodref>
+      <methodref name="CreateResHelp" visibility="public" procflags="constructor overload">
+      </methodref>
+      <methodref name="CreateResFmtHelp" visibility="public" procflags="constructor overload">
+      </methodref>
+      <methodref name="CreateResFmtHelp" visibility="public" procflags="constructor overload">
+      </methodref>
+      <methodref name="Destroy" visibility="public" procflags="destructor override">
+      </methodref>
+      <methodref name="GetBaseException" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="ToString" visibility="public" procflags="override">
+      </methodref>
+      <propertyref name="BaseException" visibility="public">
+      </propertyref>
+      <propertyref name="HelpContext" visibility="public">
+      </propertyref>
+      <propertyref name="InnerException" visibility="public">
+      </propertyref>
+      <propertyref name="Message" visibility="public">
+      </propertyref>
+      <propertyref name="StackTrace" visibility="public">
+      </propertyref>
+      <propertyref name="StackInfo" visibility="public">
+      </propertyref>
+      <methodref name="RaiseOuterException" visibility="public" procflags="static">
+      </methodref>
+      <methodref name="ThrowOuterException" visibility="public" procflags="static">
+      </methodref>
+      <ancestor name="TObject" namespace="System">
+        <methodref name="Create" visibility="public" procflags="constructor">
+        </methodref>
+        <methodref name="Free" visibility="public">
+        </methodref>
+        <methodref name="DisposeOf" visibility="public" procflags="inline">
+        </methodref>
+        <methodref name="InitInstance" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="CleanupInstance" visibility="public">
+        </methodref>
+        <methodref name="ClassType" visibility="public" procflags="inline">
+        </methodref>
+        <methodref name="ClassName" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="ClassNameIs" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="ClassParent" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="ClassInfo" visibility="public" procflags="class inline">
+        </methodref>
+        <methodref name="InstanceSize" visibility="public" procflags="class inline">
+        </methodref>
+        <methodref name="InheritsFrom" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="MethodAddress" visibility="public" procflags="class overload">
+        </methodref>
+        <methodref name="MethodAddress" visibility="public" procflags="class overload">
+        </methodref>
+        <methodref name="MethodName" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="QualifiedClassName" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="FieldAddress" visibility="public" procflags="overload">
+        </methodref>
+        <methodref name="FieldAddress" visibility="public" procflags="overload">
+        </methodref>
+        <methodref name="GetInterface" visibility="public">
+        </methodref>
+        <methodref name="GetInterfaceEntry" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="GetInterfaceTable" visibility="public" procflags="class inline">
+        </methodref>
+        <methodref name="UnitName" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="UnitScope" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="Equals" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="GetHashCode" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="ToString" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="SafeCallException" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="AfterConstruction" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="BeforeDestruction" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="Dispatch" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="DefaultHandler" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="NewInstance" visibility="public" procflags="class virtual">
+        </methodref>
+        <methodref name="FreeInstance" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="Destroy" visibility="public" procflags="destructor virtual">
+        </methodref>
+        <methodref name="CPP_ABI_1" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="CPP_ABI_2" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="CPP_ABI_3" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="GetDisposed" visibility="protected" procflags="inline">
+        </methodref>
+        <methodref name="CheckDisposed" visibility="protected" procflags="inline">
+        </methodref>
+        <propertyref name="Disposed" visibility="protected">
+        </propertyref>
+      </ancestor>
+    </ancestor>
+  </class>
+  <class name="EUnknownTimeZoneYear">
+    <devnotes>
+        <summary>Exception type used to signal the caller code that date/time year details are not
+        bundled for the given time zone.</summary>
+    </devnotes>
+    <ancestor name="Exception" namespace="System.SysUtils">
+      <methodref name="Create@" visibility="class private" procflags="class constructor noself">
+      </methodref>
+      <methodref name="Destroy@" visibility="class private" procflags="class destructor noself">
+      </methodref>
+      <methodref name="SetInnerException" visibility="protected">
+      </methodref>
+      <methodref name="SetStackInfo" visibility="protected">
+      </methodref>
+      <methodref name="GetStackTrace" visibility="protected">
+      </methodref>
+      <methodref name="RaisingException" visibility="protected" procflags="virtual">
+      </methodref>
+      <methodref name="Create" visibility="public" procflags="constructor">
+      </methodref>
+      <methodref name="CreateFmt" visibility="public" procflags="constructor">
+      </methodref>
+      <methodref name="CreateRes" visibility="public" procflags="constructor overload">
+      </methodref>
+      <methodref name="CreateRes" visibility="public" procflags="constructor overload">
+      </methodref>
+      <methodref name="CreateResFmt" visibility="public" procflags="constructor overload">
+      </methodref>
+      <methodref name="CreateResFmt" visibility="public" procflags="constructor overload">
+      </methodref>
+      <methodref name="CreateHelp" visibility="public" procflags="constructor">
+      </methodref>
+      <methodref name="CreateFmtHelp" visibility="public" procflags="constructor">
+      </methodref>
+      <methodref name="CreateResHelp" visibility="public" procflags="constructor overload">
+      </methodref>
+      <methodref name="CreateResHelp" visibility="public" procflags="constructor overload">
+      </methodref>
+      <methodref name="CreateResFmtHelp" visibility="public" procflags="constructor overload">
+      </methodref>
+      <methodref name="CreateResFmtHelp" visibility="public" procflags="constructor overload">
+      </methodref>
+      <methodref name="Destroy" visibility="public" procflags="destructor override">
+      </methodref>
+      <methodref name="GetBaseException" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="ToString" visibility="public" procflags="override">
+      </methodref>
+      <propertyref name="BaseException" visibility="public">
+      </propertyref>
+      <propertyref name="HelpContext" visibility="public">
+      </propertyref>
+      <propertyref name="InnerException" visibility="public">
+      </propertyref>
+      <propertyref name="Message" visibility="public">
+      </propertyref>
+      <propertyref name="StackTrace" visibility="public">
+      </propertyref>
+      <propertyref name="StackInfo" visibility="public">
+      </propertyref>
+      <methodref name="RaiseOuterException" visibility="public" procflags="static">
+      </methodref>
+      <methodref name="ThrowOuterException" visibility="public" procflags="static">
+      </methodref>
+      <ancestor name="TObject" namespace="System">
+        <methodref name="Create" visibility="public" procflags="constructor">
+        </methodref>
+        <methodref name="Free" visibility="public">
+        </methodref>
+        <methodref name="DisposeOf" visibility="public" procflags="inline">
+        </methodref>
+        <methodref name="InitInstance" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="CleanupInstance" visibility="public">
+        </methodref>
+        <methodref name="ClassType" visibility="public" procflags="inline">
+        </methodref>
+        <methodref name="ClassName" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="ClassNameIs" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="ClassParent" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="ClassInfo" visibility="public" procflags="class inline">
+        </methodref>
+        <methodref name="InstanceSize" visibility="public" procflags="class inline">
+        </methodref>
+        <methodref name="InheritsFrom" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="MethodAddress" visibility="public" procflags="class overload">
+        </methodref>
+        <methodref name="MethodAddress" visibility="public" procflags="class overload">
+        </methodref>
+        <methodref name="MethodName" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="QualifiedClassName" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="FieldAddress" visibility="public" procflags="overload">
+        </methodref>
+        <methodref name="FieldAddress" visibility="public" procflags="overload">
+        </methodref>
+        <methodref name="GetInterface" visibility="public">
+        </methodref>
+        <methodref name="GetInterfaceEntry" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="GetInterfaceTable" visibility="public" procflags="class inline">
+        </methodref>
+        <methodref name="UnitName" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="UnitScope" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="Equals" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="GetHashCode" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="ToString" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="SafeCallException" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="AfterConstruction" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="BeforeDestruction" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="Dispatch" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="DefaultHandler" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="NewInstance" visibility="public" procflags="class virtual">
+        </methodref>
+        <methodref name="FreeInstance" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="Destroy" visibility="public" procflags="destructor virtual">
+        </methodref>
+        <methodref name="CPP_ABI_1" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="CPP_ABI_2" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="CPP_ABI_3" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="GetDisposed" visibility="protected" procflags="inline">
+        </methodref>
+        <methodref name="CheckDisposed" visibility="protected" procflags="inline">
+        </methodref>
+        <propertyref name="Disposed" visibility="protected">
+        </propertyref>
+      </ancestor>
+    </ancestor>
+  </class>
+  <type name="TPreciseTime" type="Int64">
+    <devnotes>
+        Special type used to manipulate TDateTime in millisecond precision.
+        This is an internal type.
+    </devnotes>
+  </type>
+  <struct name="TYearSegment" size="48">
+    <devnotes>
+       <summary>Represents a specific date/time segment of the year.</summary>
+       <remarks>A calendar year in most time zones is divided into standard/ambiguous/daylight/invalid/standard segments.</remarks>
+    </devnotes>
+    <field name="FStartsAt" type="TPreciseTime" visibility="private" size="8" offset="0" />
+    <field name="FEndsAt" type="TPreciseTime" visibility="private" size="8" offset="8" />
+    <field name="FType" type="TLocalTimeType" visibility="private" size="1" offset="16" />
+    <field name="FName" type="string" visibility="private" size="8" offset="24" />
+    <field name="FPeriodOffset" type="Int64" visibility="private" size="8" offset="32" />
+    <field name="FBias" type="Int64" visibility="private" size="8" offset="40" />
+    <function name="GetUtcOffset" visibility="private" procflags="inline">
+      <parameters>
+        <retval type="TTimeSpan" />
+      </parameters>
+    </function>
+    <function name="GetStartsAt" visibility="private">
+      <parameters>
+        <retval type="TDateTime" />
+      </parameters>
+    </function>
+    <function name="GetEndsAt" visibility="private">
+      <parameters>
+        <retval type="TDateTime" />
+      </parameters>
+    </function>
+    <function name="UtcTimeInSegment" visibility="private">
+      <parameters>
+        <parameter name="AUtcTime" type="TPreciseTime" paramflags="const" />
+        <parameter name="ANoBias" type="Boolean" paramflags="out" />
+        <retval type="Boolean" />
+      </parameters>
+    </function>
+    <property name="StartsAt" visibility="public" read="GetStartsAt" type="TDateTime" default="0">
+      <devnotes>
+         <summary>The date/time when the segment starts.</summary>
+         <returns>A date/time value representing the start of the segment.</returns>
+      </devnotes>
+    </property>
+    <property name="EndsAt" visibility="public" read="GetEndsAt" type="TDateTime" default="0">
+      <devnotes>
+         <summary>The date/time when the segment ends.</summary>
+         <returns>A date/time value representing the end of the segment.</returns>
+      </devnotes>
+    </property>
+    <property name="LocalType" visibility="public" read="FType" type="TLocalTimeType">
+      <devnotes>
+         <summary>The type of the segment.</summary>
+         <returns>An enum value representing the type of the segment.</returns>
+      </devnotes>
+    </property>
+    <property name="DisplayName" visibility="public" read="FName" type="string" default="0">
+      <devnotes>
+         <summary>The time zone display name used to describe the segment.</summary>
+         <returns>The string value of the display name.</returns>
+      </devnotes>
+    </property>
+    <property name="UtcOffset" visibility="public" read="GetUtcOffset" type="TTimeSpan">
+      <devnotes>
+         <summary>The time zone UTC offset.</summary>
+         <returns>The UTC offset including the DST bias.</returns>
+      </devnotes>
+    </property>
+  </struct>
+  <array name="TYearSegmentArray">
+    <element type="TYearSegment" />
+  </array>
+  <class name="TBundledTimeZone">
+    <devnotes>
+        <summary>A timezone class implementation that retreives its data from the bundled database.</summary>
+        <remarks>This class inherits the standard <c>TTimeZone</c> class in Delphi XE.</remarks>
+    </devnotes>
+    <ancestor name="TObject" namespace="System">
+      <methodref name="Create" visibility="public" procflags="constructor">
+      </methodref>
+      <methodref name="Free" visibility="public">
+      </methodref>
+      <methodref name="DisposeOf" visibility="public" procflags="inline">
+      </methodref>
+      <methodref name="InitInstance" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="CleanupInstance" visibility="public">
+      </methodref>
+      <methodref name="ClassType" visibility="public" procflags="inline">
+      </methodref>
+      <methodref name="ClassName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassNameIs" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassParent" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassInfo" visibility="public" procflags="class inline">
+      </methodref>
+      <methodref name="InstanceSize" visibility="public" procflags="class inline">
+      </methodref>
+      <methodref name="InheritsFrom" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="MethodAddress" visibility="public" procflags="class overload">
+      </methodref>
+      <methodref name="MethodAddress" visibility="public" procflags="class overload">
+      </methodref>
+      <methodref name="MethodName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="QualifiedClassName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="FieldAddress" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="FieldAddress" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="GetInterface" visibility="public">
+      </methodref>
+      <methodref name="GetInterfaceEntry" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="GetInterfaceTable" visibility="public" procflags="class inline">
+      </methodref>
+      <methodref name="UnitName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="UnitScope" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="Equals" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="GetHashCode" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="ToString" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="SafeCallException" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="AfterConstruction" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="BeforeDestruction" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="Dispatch" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="DefaultHandler" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="NewInstance" visibility="public" procflags="class virtual">
+      </methodref>
+      <methodref name="FreeInstance" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="Destroy" visibility="public" procflags="destructor virtual">
+      </methodref>
+      <methodref name="CPP_ABI_1" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="CPP_ABI_2" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="CPP_ABI_3" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="GetDisposed" visibility="protected" procflags="inline">
+      </methodref>
+      <methodref name="CheckDisposed" visibility="protected" procflags="inline">
+      </methodref>
+      <propertyref name="Disposed" visibility="protected">
+      </propertyref>
+    </ancestor>
+    <members>
+      <field name="FZone" type="Pointer" visibility="private" size="8" offset="8" />
+      <field name="FSegmentsByYear" type="TDictionary&lt;System.Word,TZDB.TYearSegmentArray&gt;" visibility="private" size="8" offset="16" />
+      <function name="GetSpillOverYearBreakdown" visibility="private">
+        <parameters>
+          <parameter name="AYear" type="Word" paramflags="const" />
+          <retval type="TYearSegmentArray">
+            <devnotes>
+               <summary>An array of year segments.</summary>
+            </devnotes>
+          </retval>
+        </parameters>
+      </function>
+      <function name="GetSegment" visibility="private">
+        <parameters>
+          <parameter name="AYear" type="Word" paramflags="const" />
+          <parameter name="APreciseTime" type="TPreciseTime" paramflags="const" />
+          <parameter name="AForceDaylight" type="Boolean" paramflags="const" />
+          <parameter name="AFailOnInvalid" type="Boolean" paramflags="const" />
+          <retval type="TYearSegment">
+            <devnotes>
+               <summary>Represents a specific date/time segment of the year.</summary>
+               <remarks>A calendar year in most time zones is divided into standard/ambiguous/daylight/invalid/standard segments.</remarks>
+            </devnotes>
+          </retval>
+        </parameters>
+      </function>
+      <function name="GetSegmentUtc" visibility="private">
+        <parameters>
+          <parameter name="AYear" type="Word" paramflags="const" />
+          <parameter name="APreciseTime" type="TPreciseTime" paramflags="const" />
+          <retval type="TYearSegment">
+            <devnotes>
+               <summary>Represents a specific date/time segment of the year.</summary>
+               <remarks>A calendar year in most time zones is divided into standard/ambiguous/daylight/invalid/standard segments.</remarks>
+            </devnotes>
+          </retval>
+        </parameters>
+      </function>
+      <function name="TryFindSegment" visibility="private">
+        <parameters>
+          <parameter name="AYear" type="Word" paramflags="const" />
+          <parameter name="AType" type="TLocalTimeType" paramflags="const" />
+          <parameter name="ARev" type="Boolean" paramflags="const" />
+          <parameter name="ASegment" type="TYearSegment" paramflags="out" />
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="GetCurrentAbbreviation" visibility="private">
+        <parameters>
+          <retval type="string" />
+        </parameters>
+      </function>
+      <function name="GetCurrentDisplayName" visibility="private">
+        <parameters>
+          <retval type="string" />
+        </parameters>
+      </function>
+      <function name="GetCurrentUtcOffset" visibility="private">
+        <parameters>
+          <retval type="TTimeSpan" />
+        </parameters>
+      </function>
+      <function name="DoGetID" visibility="protected">
+        <devnotes>
+            <summary>Returns the ID of the timezone. An ID is a string that should uniquely identify the timezone.</summary>
+            <returns>The ID of the timezone.</returns>
+        </devnotes>
+        <parameters>
+          <retval type="string" />
+        </parameters>
+      </function>
+      <constructor name="Create" visibility="public">
+        <devnotes>
+            <summary>Creates a new instance of this timezone class.</summary>
+            <param name="ATimeZoneID">The ID of the timezone to use (ex. &quot;Europe/Bucharest&quot;).</param>
+            <exception cref="T:TZDB.ETimeZoneInvalid">The specified ID cannot be found in the bundled database.</exception>
+        </devnotes>
+        <parameters>
+          <parameter name="ATimeZoneID" type="string" paramflags="const" />
+        </parameters>
+      </constructor>
+      <destructor name="Destroy" visibility="public">
+        <devnotes>
+            <summary>Destroys the current instance.</summary>
+        </devnotes>
+        <parameters>
+        </parameters>
+      </destructor>
+      <function name="KnownTimeZones" visibility="public" procflags="class">
+        <devnotes>
+            <summary>Returns a list of known time zones.</summary>
+            <param name="AIncludeAliases">Pass <c>True</c> to include time zone aliases into the list.</param>
+            <returns>An array of strings representing the IDs of the known time zones.</returns>
+        </devnotes>
+        <parameters>
+          <parameter name="AIncludeAliases" type="Boolean" paramflags="const">
+            <value>
+              False
+            </value>
+          </parameter>
+          <retval type="TStringDynArray" />
+        </parameters>
+      </function>
+      <function name="KnownAliases" visibility="public" procflags="class">
+        <devnotes>
+            <summary>Returns a list of known time zone aliases.</summary>
+            <returns>An array of strings representing the aliases of the known time zones.</returns>
+        </devnotes>
+        <parameters>
+          <retval type="TStringDynArray" />
+        </parameters>
+      </function>
+      <function name="GetTimeZoneFromAlias" visibility="public" procflags="class inline">
+        <devnotes>
+            <summary>Returns the time zone name for a given alias.</summary>
+            <param name="AAliasID">The alias to lookup.</param>
+            <returns>The name of the time zone, if found.</returns>
+            <exception cref="T:TZDB.ETimeZoneInvalid">The specified alias cannot be found in the bundled database.</exception>
+        </devnotes>
+        <parameters>
+          <parameter name="AAliasID" type="string" paramflags="const" />
+          <retval type="string" />
+        </parameters>
+      </function>
+      <function name="GetTimeZone" visibility="public" procflags="class">
+        <devnotes>
+            <summary>Returns an instance of this time zone class.</summary>
+            <param name="ATimeZoneID">The ID of the timezone to use (ex. &quot;Europe/Bucharest&quot;).</param>
+            <exception cref="T:TZDB.ETimeZoneInvalid">The specified ID cannot be found in the bundled database.</exception>
+        </devnotes>
+        <parameters>
+          <parameter name="ATimeZoneID" type="string" paramflags="const" />
+          <retval type="TBundledTimeZone">
+            <devnotes>
+                <summary>A timezone class implementation that retreives its data from the bundled database.</summary>
+                <remarks>This class inherits the standard <c>TTimeZone</c> class in Delphi XE.</remarks>
+            </devnotes>
+          </retval>
+        </parameters>
+      </function>
+      <function name="Version" visibility="public" procflags="class">
+        <devnotes>
+            <summary>Returns the version of the TZDB component.</summary>
+            <returns>A string representing the version of the source.</returns>
+        </devnotes>
+        <parameters>
+          <retval type="string" />
+        </parameters>
+      </function>
+      <function name="DbVersion" visibility="public" procflags="class">
+        <devnotes>
+            <summary>Returns the version of compiled TZDB database.</summary>
+            <returns>A string representing the compiled version.</returns>
+        </devnotes>
+        <parameters>
+          <retval type="string" />
+        </parameters>
+      </function>
+      <function name="GetYearBreakdown" visibility="public">
+        <devnotes>
+            <summary>Breaks a given year into components segments.</summary>
+            <param name="AYear">The year to get data for.</param>
+            <exception cref="T:TZDB.EUnknownTimeZoneYear">The specified year is not in the bundled database.</exception>
+        </devnotes>
+        <parameters>
+          <parameter name="AYear" type="Word" paramflags="const" />
+          <retval type="TYearSegmentArray">
+            <devnotes>
+               <summary>An array of year segments.</summary>
+            </devnotes>
+          </retval>
+        </parameters>
+      </function>
+      <function name="DaylightTimeStart" visibility="public" procflags="inline">
+        <devnotes>
+            <summary>Get the starting date/time of daylight period.</summary>
+            <remarks>This function considers the first period of this type and will not work properly for complicated time zones.</remarks>
+            <param name="AYear">The year to get data for.</param>
+            <returns>The start time of daylight saving period in the local time; or '00/00/0000 00:00:00.000' is there is no such date/time.</returns>
+            <exception cref="T:TZDB.EUnknownTimeZoneYear">The specified year is not in the bundled database.</exception>
+        </devnotes>
+        <parameters>
+          <parameter name="AYear" type="Word" paramflags="const" />
+          <retval type="TDateTime" />
+        </parameters>
+      </function>
+      <function name="StandardTimeStart" visibility="public" procflags="inline">
+        <devnotes>
+            <summary>Get the starting date/time of standard period.</summary>
+            <remarks>This function considers the first period of this type and will not work properly for complicated time zones.</remarks>
+            <param name="AYear">The year to get data for.</param>
+            <returns>The start date/time of standard period in local time; or '00/00/0000 00:00:00.000' is there is no such date/time.</returns>
+            <exception cref="T:TZDB.EUnknownTimeZoneYear">The specified year is not in the bundled database.</exception>
+        </devnotes>
+        <parameters>
+          <parameter name="AYear" type="Word" paramflags="const" />
+          <retval type="TDateTime" />
+        </parameters>
+      </function>
+      <function name="InvalidTimeStart" visibility="public" procflags="inline">
+        <devnotes>
+            <summary>Get the starting date/time of invalid period.</summary>
+            <remarks>This function considers the first period of this type and will not work properly for complicated time zones.</remarks>
+            <param name="AYear">The year to get data for.</param>
+            <returns>The start date/time of invalid period in local time; or '00/00/0000 00:00:00.000' is there is no such date/time.</returns>
+            <exception cref="T:TZDB.EUnknownTimeZoneYear">The specified year is not in the bundled database.</exception>
+        </devnotes>
+        <parameters>
+          <parameter name="AYear" type="Word" paramflags="const" />
+          <retval type="TDateTime" />
+        </parameters>
+      </function>
+      <function name="AmbiguousTimeStart" visibility="public" procflags="inline">
+        <devnotes>
+            <summary>Get the starting date/time of ambiguous period.</summary>
+            <remarks>This function considers the first period of this type and will not work properly for complicated time zones.</remarks>
+            <param name="AYear">The year to get data for.</param>
+            <returns>The start date/time of ambiguous period in local time; or '00/00/0000 00:00:00.000' is there is no such date/time.</returns>
+            <exception cref="T:TZDB.EUnknownTimeZoneYear">The specified year is not in the bundled database.</exception>
+        </devnotes>
+        <parameters>
+          <parameter name="AYear" type="Word" paramflags="const" />
+          <retval type="TDateTime" />
+        </parameters>
+      </function>
+      <function name="DaylightTimeEnd" visibility="public" procflags="inline">
+        <devnotes>
+            <summary>Get the ending date/time of daylight saving period.</summary>
+            <remarks>This function considers the first period of this type and will not work properly for complicated time zones.</remarks>
+            <param name="AYear">The year to get data for.</param>
+            <returns>The end date/time of daylight saving period in local time; or '00/00/0000 00:00:00.000' is there is no such date/time.</returns>
+            <exception cref="T:TZDB.EUnknownTimeZoneYear">The specified year is not in the bundled database.</exception>
+        </devnotes>
+        <parameters>
+          <parameter name="AYear" type="Word" paramflags="const" />
+          <retval type="TDateTime" />
+        </parameters>
+      </function>
+      <function name="StandardTimeEnd" visibility="public" procflags="inline">
+        <devnotes>
+            <summary>Get the ending date/time of standard period.</summary>
+            <remarks>This function considers the first period of this type and will not work properly for complicated time zones.</remarks>
+            <param name="AYear">The year to get data for.</param>
+            <returns>The ending date/time of standard period in local time; or '00/00/0000 00:00:00.000' is there is no such date/time.</returns>
+            <exception cref="T:TZDB.EUnknownTimeZoneYear">The specified year is not in the bundled database.</exception>
+        </devnotes>
+        <parameters>
+          <parameter name="AYear" type="Word" paramflags="const" />
+          <retval type="TDateTime" />
+        </parameters>
+      </function>
+      <function name="InvalidTimeEnd" visibility="public" procflags="inline">
+        <devnotes>
+            <summary>Get the ending date/time of invalid period.</summary>
+            <remarks>This function considers the first period of this type and will not work properly for complicated time zones.</remarks>
+            <param name="AYear">The year to get data for.</param>
+            <returns>The end date/time of invalid period in local time; or '00/00/0000 00:00:00.000' is there is no such date/time.</returns>
+            <exception cref="T:TZDB.EUnknownTimeZoneYear">The specified year is not in the bundled database.</exception>
+        </devnotes>
+        <parameters>
+          <parameter name="AYear" type="Word" paramflags="const" />
+          <retval type="TDateTime" />
+        </parameters>
+      </function>
+      <function name="AmbiguousTimeEnd" visibility="public" procflags="inline">
+        <devnotes>
+            <summary>Get the ending date/time of ambiguous period.</summary>
+            <remarks>This function considers the first period of this type and will not work properly for complicated time zones.</remarks>
+            <param name="AYear">The year to get data for.</param>
+            <returns>The end date/time of ambiguous period in local time; or '00/00/0000 00:00:00.000' is there is no such date/time.</returns>
+            <exception cref="T:TZDB.EUnknownTimeZoneYear">The specified year is not in the bundled database.</exception>
+        </devnotes>
+        <parameters>
+          <parameter name="AYear" type="Word" paramflags="const" />
+          <retval type="TDateTime" />
+        </parameters>
+      </function>
+      <function name="HasDaylightTime" visibility="public" procflags="inline">
+        <devnotes>
+            <summary>Determines if the timezone has daylight saving period.</summary>
+            <param name="AYear">The year to check.</param>
+            <returns><c>true</c> if the timezone has daylight saving time in the specified year.</returns>
+            <exception cref="T:TZDB.EUnknownTimeZoneYear">The specified year is not in the bundled database.</exception>
+        </devnotes>
+        <parameters>
+          <parameter name="AYear" type="Word" paramflags="const" />
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="ToISO8601Format" visibility="public">
+        <devnotes>
+            <summary>Converts an UTC date/time to ISO8601 date time string.</summary>
+            <param name="ADateTime">The UTC date/time to convert.</param>
+            <returns>The ISO8601 date/time string that corresponds to the passed UTC time.</returns>
+            <exception cref="T:TZDB.EUnknownTimeZoneYear">The specified year is not in the bundled database.</exception>
+        </devnotes>
+        <parameters>
+          <parameter name="ADateTime" type="TDateTime" paramflags="const" />
+          <retval type="string" />
+        </parameters>
+      </function>
+      <function name="GetAbbreviation" visibility="public">
+        <devnotes>
+            <summary>Generates an abbreviation string for the given local time.</summary>
+            <param name="ADateTime">The local time.</param>
+            <param name="AForceDaylight">Specify a <c>True</c> value if ambiguous periods should be treated as DST.</param>
+            <returns>A string containing the abbreviation.</returns>
+            <exception cref="T:TZDB.EUnknownTimeZoneYear">The specified date/time year is not in the bundled database.</exception>
+            <exception cref="T:System.DateUtils.ELocalTimeInvalid">The specified local time is invalid.</exception>
+        </devnotes>
+        <parameters>
+          <parameter name="ADateTime" type="TDateTime" paramflags="const" />
+          <parameter name="AForceDaylight" type="Boolean" paramflags="const">
+            <value>
+              False
+            </value>
+          </parameter>
+          <retval type="string" />
+        </parameters>
+      </function>
+      <function name="GetDisplayName" visibility="public">
+        <devnotes>
+            <summary>Generates a diplay string for the given local time.</summary>
+            <param name="ADateTime">The local time.</param>
+            <param name="AForceDaylight">Specify a <c>True</c> value if ambiguous periods should be treated as DST.</param>
+            <returns>A string containing the display name.</returns>
+            <exception cref="T:TZDB.EUnknownTimeZoneYear">The specified date/time year is not in the bundled database.</exception>
+            <exception cref="T:System.DateUtils.ELocalTimeInvalid">The specified local time is invalid.</exception>
+        </devnotes>
+        <parameters>
+          <parameter name="ADateTime" type="TDateTime" paramflags="const" />
+          <parameter name="AForceDaylight" type="Boolean" paramflags="const">
+            <value>
+              False
+            </value>
+          </parameter>
+          <retval type="string" />
+        </parameters>
+      </function>
+      <function name="GetLocalTimeType" visibility="public">
+        <devnotes>
+            <summary>Returns the type of the local time.</summary>
+            <param name="ADateTime">The local time.</param>
+            <returns>An enumeration value specifying the type of the local time.</returns>
+            <exception cref="T:TZDB.EUnknownTimeZoneYear">The specified date/time year is not in the bundled database.</exception>
+        </devnotes>
+        <parameters>
+          <parameter name="ADateTime" type="TDateTime" paramflags="const" />
+          <retval type="TLocalTimeType" />
+        </parameters>
+      </function>
+      <function name="IsAmbiguousTime" visibility="public">
+        <devnotes>
+            <summary>Checks whether the specified local time is ambiguous.</summary>
+            <param name="ADateTime">The local time.</param>
+            <returns><c>True</c> if the local time is ambiguous; <c>False</c> otherwise.</returns>
+            <exception cref="T:TZDB.EUnknownTimeZoneYear">The specified date/time year is not in the bundled database.</exception>
+        </devnotes>
+        <parameters>
+          <parameter name="ADateTime" type="TDateTime" paramflags="const" />
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="IsDaylightTime" visibility="public">
+        <devnotes>
+            <summary>Checks whether the specified local time is daylight.</summary>
+            <param name="ADateTime">The local time.</param>
+            <param name="AForceDaylight">Specify a <c>True</c> value if ambiguous periods should be treated as DST.</param>
+            <returns><c>True</c> if the local time is ambiguous; <c>False</c> otherwise.</returns>
+            <exception cref="T:TZDB.EUnknownTimeZoneYear">The specified date/time year is not in the bundled database.</exception>
+        </devnotes>
+        <parameters>
+          <parameter name="ADateTime" type="TDateTime" paramflags="const" />
+          <parameter name="AForceDaylight" type="Boolean" paramflags="const">
+            <value>
+              False
+            </value>
+          </parameter>
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="IsInvalidTime" visibility="public" procflags="inline">
+        <devnotes>
+            <summary>Checks whether the specified local time is invalid.</summary>
+            <param name="ADateTime">The local time.</param>
+            <returns><c>True</c> if the local time is invalid; <c>False</c> otherwise.</returns>
+            <exception cref="T:TZDB.EUnknownTimeZoneYear">The specified date/time year is not in the bundled database.</exception>
+        </devnotes>
+        <parameters>
+          <parameter name="ADateTime" type="TDateTime" paramflags="const" />
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="IsStandardTime" visibility="public">
+        <devnotes>
+            <summary>Checks whether the specified local time is standard.</summary>
+            <param name="ADateTime">The local time.</param>
+            <param name="AForceDaylight">Specify a <c>True</c> value if ambiguous periods should be treated as DST.</param>
+            <returns><c>True</c> if the local time is standard; <c>False</c> otherwise.</returns>
+            <exception cref="T:TZDB.EUnknownTimeZoneYear">The specified date/time year is not in the bundled database.</exception>
+        </devnotes>
+        <parameters>
+          <parameter name="ADateTime" type="TDateTime" paramflags="const" />
+          <parameter name="AForceDaylight" type="Boolean" paramflags="const">
+            <value>
+              False
+            </value>
+          </parameter>
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="GetUtcOffset" visibility="public">
+        <devnotes>
+            <summary>Returns the UTC offset of the given local time.</summary>
+            <param name="ADateTime">The local time.</param>
+            <param name="AForceDaylight">Specify a <c>True</c> value if ambiguous periods should be treated as DST.</param>
+            <returns>The UTC offset of the given local time. Subtract this value from the passed local time to obtain an UTC time.</returns>
+            <exception cref="T:System.DateUtils.ELocalTimeInvalid">The specified local time is invalid.</exception>
+            <exception cref="T:TZDB.EUnknownTimeZoneYear">The specified date/time year is not in the bundled database.</exception>
+        </devnotes>
+        <parameters>
+          <parameter name="ADateTime" type="TDateTime" paramflags="const" />
+          <parameter name="AForceDaylight" type="Boolean" paramflags="const">
+            <value>
+              False
+            </value>
+          </parameter>
+          <retval type="TTimeSpan" />
+        </parameters>
+      </function>
+      <function name="ToLocalTime" visibility="public">
+        <devnotes>
+            <summary>Converts an UTC time to a local time.</summary>
+            <param name="ADateTime">The UTC time.</param>
+            <returns>The local time that corresponds to the passed UTC time.</returns>
+            <exception cref="T:TZDB.EUnknownTimeZoneYear">The specified date/time year is not in the bundled database.</exception>
+        </devnotes>
+        <parameters>
+          <parameter name="ADateTime" type="TDateTime" paramflags="const" />
+          <retval type="TDateTime" />
+        </parameters>
+      </function>
+      <function name="ToUniversalTime" visibility="public">
+        <devnotes>
+            <summary>Converts a local time to an UTC time.</summary>
+            <param name="ADateTime">The local time.</param>
+            <param name="AForceDaylight">Specify a <c>True</c> value if ambiguous periods should be treated as DST.</param>
+            <returns>The UTC time that corresponds to the passed local time.</returns>
+            <exception cref="T:System.DateUtils.ELocalTimeInvalid">The specified local time is invalid.</exception>
+            <exception cref="T:TZDB.EUnknownTimeZoneYear">The specified date/time year is not in the bundled database.</exception>
+        </devnotes>
+        <parameters>
+          <parameter name="ADateTime" type="TDateTime" paramflags="const" />
+          <parameter name="AForceDaylight" type="Boolean" paramflags="const">
+            <value>
+              False
+            </value>
+          </parameter>
+          <retval type="TDateTime" />
+        </parameters>
+      </function>
+      <property name="ID" visibility="public" read="DoGetID" type="string" default="0">
+        <devnotes>
+            <summary>Returns the ID of the timezone. An ID is a string that should uniquely identify the timezone.</summary>
+            <returns>The ID of the timezone.</returns>
+        </devnotes>
+      </property>
+      <property name="DisplayName" visibility="public" read="GetCurrentDisplayName" type="string" default="0">
+        <devnotes>
+            <summary>Returns the current time zone's display name string.</summary>
+            <returns>A string containing the display name.</returns>
+        </devnotes>
+      </property>
+      <property name="Abbreviation" visibility="public" read="GetCurrentAbbreviation" type="string" default="0">
+        <devnotes>
+            <summary>Returns the current time zone's abbreviation string.</summary>
+            <returns>A string containing the abbreviation.</returns>
+        </devnotes>
+      </property>
+      <property name="UtcOffset" visibility="public" read="GetCurrentUtcOffset" type="TTimeSpan">
+        <devnotes>
+            <summary>Returns the current time zone's UTC offset.</summary>
+            <returns>The current UTC offset.</returns>
+        </devnotes>
+      </property>
+    </members>
+  </class>
+</namespace>

@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<namespace name="SystemService" platform="Win64">
+  <interface name="ISystemService" GUID="{F9CC965F-B6F1-4D38-A50A-E271705E9FCB}" ancestor="IInvokable">
+    <attributes>
+      <attribute name="TObject" />
+    </attributes>
+    <function name="Info" visibility="public" procflags="abstract virtual">
+      <attributes>
+        <attribute name="TObject" />
+      </attributes>
+      <devnotes>
+          <summary>
+            XData Application Information
+          </summary>
+          <remarks>
+            Returns JSON that includes information about the currently running application.
+          </remarks>
+          <param name="TZ">
+            The TimeZone of the connecting client.  This is used in determining what
+            adjustments to make when displaying dates and times on reports, or where
+            similar data needs to be converted to a local context.  This uses IANA
+            TimeZone names.  If an invalid TimeZone is provided, the JSON object for
+            Current Time (Client) will indicate as much.  Here are some examples.
+            - Pacific Standard Time
+            - America/New_York
+            - Europe/Paris
+            - EET
+            - UTC
+            - GMT
+            - EST
+            - PST8PDT
+          </param>
+      </devnotes>
+      <parameters>
+        <parameter name="TZ" type="string" />
+        <retval type="TStream" />
+      </parameters>
+    </function>
+    <function name="Login" visibility="public" procflags="abstract virtual">
+      <attributes>
+        <attribute name="TObject" />
+      </attributes>
+      <devnotes>
+          <summary>
+            Login to XData Server
+          </summary>
+          <remarks>
+            If login is successful, a JWT will be returned.
+          </remarks>
+          <param name="Login_ID">
+            Login_ID can be any of the contact entries that have been marked as login_ok,
+            which would typically be just the email address but could also include phone
+            numbers or other values.
+          </param>
+          <param name="Password">
+            Password corresponding to the username.
+          </param>
+          <param name="API_Key">
+            An application-level API key that has been provided for your use.
+          </param>
+          <param name="TZ">
+            The TimeZone of the connecting client.  This is used in determining what
+            adjustments to make when displaying dates and times on reports, or where
+            similar data needs to be converted to a local context.  This uses IANA
+            TimeZone names.  If an invalid TimeZone is provided, the JSON object for
+            Current Time (Client) will indicate as much.  Here are some examples.
+            - Pacific Standard Time
+            - America/New_York
+            - Europe/Paris
+            - EET
+            - UTC
+            - GMT
+            - EST
+            - PST8PDT
+          </param>
+      </devnotes>
+      <parameters>
+        <parameter name="Login_ID" type="string" />
+        <parameter name="Password" type="string" />
+        <parameter name="API_Key" type="string" />
+        <parameter name="TZ" type="string" />
+        <retval type="TStream" />
+      </parameters>
+    </function>
+    <function name="Logout" visibility="public" procflags="abstract virtual">
+      <attributes>
+        <attribute name="TObject" />
+      </attributes>
+      <devnotes>
+          <summary>
+            Logout - revoke the JWT.
+          </summary>
+          <remarks>
+            The JWT issued by the Login endpoint is good for a set period of time.  This will revoke
+            the JWT, making it invalid immediately rather than when it expires after a period of time.
+          </remarks>
+          <param name="ActionSession">
+            Session identifier unique to the user - just an encoded Unix timestamp.
+          </param>
+          <param name="ActionLog">
+            Client action log. Just a text log.
+          </param>
+      </devnotes>
+      <parameters>
+        <parameter name="ActionSession" type="string" />
+        <parameter name="ActionLog" type="string" />
+        <retval type="TStream" />
+      </parameters>
+    </function>
+    <function name="Renew" visibility="public" procflags="abstract virtual">
+      <attributes>
+        <attribute name="TObject" />
+      </attributes>
+      <devnotes>
+          <summary>
+            Renew a previously issued JWT.
+          </summary>
+          <remarks>
+            The JWT issued by the Login endpoint is good for a set period of time.
+            This endpoint will re-issue a new JWT with the same claims for another period of time.
+          </remarks>
+          <param name="ActionSession">
+            Session identifier unique to the user - just an encoded Unix timestamp.
+          </param>
+          <param name="ActionLog">
+            Client action log. Just a text log.
+          </param>
+      </devnotes>
+      <parameters>
+        <parameter name="ActionSession" type="string" />
+        <parameter name="ActionLog" type="string" />
+        <retval type="TStream" />
+      </parameters>
+    </function>
+  </interface>
+</namespace>
